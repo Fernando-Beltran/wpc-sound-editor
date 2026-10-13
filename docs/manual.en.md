@@ -25,6 +25,10 @@ The language button (flag) at the top right switches between Spanish and English
 
 ## 2. Loading the ROMs
 
+![The load screen](img/01-carga.png)
+
+*(Screenshots show the interface in Spanish; the flag button switches it to English.)*
+
 1. Choose the board type: **Pre-DCS (1990-1993)** — three sockets, U18, U15 and U14 — or
    **DCS (1993-1998)** — seven sockets, U2 to U8.
 2. Drop the files on the box, in any of these ways:
@@ -47,6 +51,8 @@ never downloads anything itself: you fetch the file in your browser and drop it 
 ## 3. Pre-DCS games (Twilight Zone)
 
 ### 3.1 The chip map
+
+![Twilight Zone's chip map](img/02-tz-mapa.png)
 
 Each ROM is drawn as its chip, with its 32 KB pages and every sound block at its true
 position. Blue is voice (HC55516 / CVSD), orange DAC samples, green what you have edited;
@@ -76,6 +82,8 @@ imported as JSON.
 
 ### 3.4 The music (Music tab)
 
+![The Music tab](img/03-tz-musica.png)
+
 This board's music is not recorded: it is notes the program sends to the YM2151 FM chip.
 The editor **emulates the board** to hear it.
 
@@ -93,6 +101,9 @@ what each one stops playing.
 
 **Replacing a music cue with a MIDI file.** The MIDI is compiled into the game's own FM
 music:
+
+![Replacing a music cue with a MIDI file](img/04-tz-midi.png)
+
 1. Load the `.mid`. You see the original song's **parts**, each with its instrument.
 2. For each part you can choose **one of the game's 104 instruments** and hear it with ▶.
 3. Order the **MIDI channels by priority**: the first never lose notes; the rest fill the
@@ -117,6 +128,8 @@ power-on), plus a README listing every change.
 
 ### 4.1 The track list
 
+![A DCS game's tracks](img/05-dcs-pistas.png)
+
 Each track is what plays when the machine asks for it. Filter by channel — **0 is the
 music**, 1, 2 and 3 voices and effects — and search by command (`01 76`) or by your note.
 The ⟳ icon marks a looping track.
@@ -125,6 +138,8 @@ On the right are **the seven chips** with every piece of audio at its real place
 a track lights the pieces it plays in orange; clicking a piece picks a track that uses it.
 
 ### 4.2 Replacing a track with your own audio
+
+![The waveform trimmer](img/06-dcs-recorte.png)
 
 1. Pick the track and press **Replace with audio** (WAV, MP3 or anything your browser
    can read).

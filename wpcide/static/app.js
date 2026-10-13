@@ -1417,6 +1417,22 @@ for (const button of $("board-pick").querySelectorAll("button")) {
     drawSlots(await response.json());
   });
 }
+// Sticky layers stack under the header, whose height depends on the
+// language and the window: measure it rather than guess it.
+function measureChrome() {
+  const header = document.querySelector("header");
+  const tabs = $("tabs");
+  const root = document.documentElement.style;
+  if (header) root.setProperty("--header-h", `${header.offsetHeight}px`);
+  root.setProperty("--tabs-h", `${tabs && !tabs.hidden ? tabs.offsetHeight : 0}px`);
+}
+window.addEventListener("resize", measureChrome);
+if (window.ResizeObserver) {
+  const watcher = new ResizeObserver(measureChrome);
+  watcher.observe(document.querySelector("header"));
+  watcher.observe($("tabs"));
+}
+measureChrome();
 fetch("/api/status").then((r) => r.json()).then(drawSlots);
 
 // The ROM lives in the process, not the page, so a reload should find

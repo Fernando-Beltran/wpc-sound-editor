@@ -25,6 +25,8 @@ Botón de idioma (bandera) arriba a la derecha: español / inglés.
 
 ## 2. Cargar las ROM
 
+![Pantalla de carga](img/01-carga.png)
+
 1. Elige el tipo de placa: **Anterior a DCS (1990-1993)** — tres zócalos, U18, U15 y U14 —
    o **DCS (1993-1998)** — siete zócalos, U2 a U8.
 2. Arrastra los ficheros al recuadro, de cualquiera de estas formas:
@@ -47,6 +49,8 @@ editor no descarga nada por sí mismo: bajas el fichero en tu navegador y lo sue
 ## 3. Juegos anteriores a DCS (Twilight Zone)
 
 ### 3.1 El mapa de chips
+
+![Mapa de chips de Twilight Zone](img/02-tz-mapa.png)
 
 Cada ROM se dibuja como su chip, con sus páginas de 32 KB y cada bloque de sonido en su
 posición real. Azul es la voz (HC55516 / CVSD), naranja las muestras DAC, verde lo que ya
@@ -76,6 +80,8 @@ exportar e importar en JSON.
 
 ### 3.4 La música (pestaña Música)
 
+![La pestaña Música](img/03-tz-musica.png)
+
 La música de estas placas no está grabada: son notas que el programa envía al chip FM
 YM2151. El editor **emula la placa** para oírla.
 
@@ -92,6 +98,9 @@ El audio ocupa bloques existentes: el editor propone primero los que nadie usa y
 qué deja de sonar con cada uno.
 
 **Sustituir una música por un MIDI.** El MIDI se compila a la propia música FM del juego:
+
+![Sustituir una música por un MIDI](img/04-tz-midi.png)
+
 1. Carga el `.mid`. Verás las **partes** de la música original, cada una con su instrumento.
 2. Para cada parte puedes elegir **uno de los 104 instrumentos** del juego y oírlo con ▶.
 3. Ordena los **canales MIDI por prioridad**: los primeros nunca pierden notas; el resto
@@ -116,6 +125,8 @@ error al encender), más un README con cada cambio.
 
 ### 4.1 La lista de pistas
 
+![Pistas de un juego DCS](img/05-dcs-pistas.png)
+
 Cada pista es lo que suena cuando la máquina la pide. Se filtran por canal — el **0 es la
 música**, el 1, 2 y 3 voces y efectos — y se buscan por comando (`01 76`) o por tu nota. El
 icono ⟳ indica que la pista se repite en bucle.
@@ -125,6 +136,8 @@ una pista se iluminan en naranja los trozos que reproduce; al pulsar un trozo se
 pista que lo usa.
 
 ### 4.2 Sustituir una pista por tu audio
+
+![El recortador sobre la onda](img/06-dcs-recorte.png)
 
 1. Elige la pista y pulsa **Sustituir por un audio** (WAV, MP3 o lo que tu navegador sepa
    leer).

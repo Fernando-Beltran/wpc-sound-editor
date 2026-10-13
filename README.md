@@ -37,6 +37,19 @@ WPC machines on top of FreeWPC.
 
 Verified in PinMAME: patched sets boot like the originals and play the new audio.
 
+### Screenshots
+
+| | |
+| --- | --- |
+| ![Loading the ROMs](docs/img/01-carga.png) | ![Twilight Zone: the sound chips](docs/img/02-tz-mapa.png) |
+| **Loading** — pick the board, drop the files or PinMAME's zip | **Twilight Zone** — every sound block in place on its chip |
+| ![The FM music](docs/img/03-tz-musica.png) | ![MIDI into the game's music](docs/img/04-tz-midi.png) |
+| **Music** — the FM music rendered by emulating the board | **MIDI** — parts, instruments and channel priority |
+| ![Star Trek: TNG tracks](docs/img/05-dcs-pistas.png) | ![The DCS trimmer](docs/img/06-dcs-recorte.png) |
+| **STTNG (DCS)** — 482 tracks, their audio lit on the 7 ROMs | **Trimmer** — a slot-sized window and speed fitting |
+
+*(The interface is shown in Spanish; the flag button switches it to English.)*
+
 ### ROMs
 
 **No ROM images are distributed here, and none ever will be.** Each user supplies their
@@ -114,6 +127,17 @@ WPC reales sobre FreeWPC.
 
 Verificado en PinMAME: los juegos parcheados arrancan como los originales y suenan con el
 audio nuevo.
+
+### Capturas
+
+| | |
+| --- | --- |
+| ![Cargar las ROM](docs/img/01-carga.png) | ![Twilight Zone: los chips de sonido](docs/img/02-tz-mapa.png) |
+| **Carga** — eliges la placa y sueltas los ficheros o el zip de PinMAME | **Twilight Zone** — cada bloque de sonido en su sitio del chip |
+| ![La música FM](docs/img/03-tz-musica.png) | ![MIDI a la música del juego](docs/img/04-tz-midi.png) |
+| **Música** — la música FM, generada emulando la placa | **MIDI** — partes, instrumentos y prioridad de canales |
+| ![Pistas de Star Trek: TNG](docs/img/05-dcs-pistas.png) | ![El recortador DCS](docs/img/06-dcs-recorte.png) |
+| **STTNG (DCS)** — 482 pistas y su audio iluminado en las 7 ROM | **Recortador** — ventana del tamaño del hueco y ajuste de velocidad |
 
 ### ROMs
 
