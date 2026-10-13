@@ -1,0 +1,2920 @@
+[
+ {
+  "bytes": "93b3ae",
+  "variants": 12,
+  "uses": [
+   {
+    "command": 184,
+    "program": 48123,
+    "channel": 3
+   },
+   {
+    "command": 253,
+    "program": 50500,
+    "channel": 3
+   },
+   {
+    "command": 254,
+    "program": 50546,
+    "channel": 3
+   },
+   {
+    "command": 255,
+    "program": 50598,
+    "channel": 3
+   },
+   {
+    "command": 205,
+    "program": 50103,
+    "channel": 7
+   },
+   {
+    "command": 206,
+    "program": 50257,
+    "channel": 7
+   },
+   {
+    "command": 207,
+    "program": 50400,
+    "channel": 7
+   },
+   {
+    "command": 205,
+    "program": 50100,
+    "channel": 6
+   },
+   {
+    "command": 206,
+    "program": 50254,
+    "channel": 6
+   },
+   {
+    "command": 207,
+    "program": 50397,
+    "channel": 6
+   },
+   {
+    "command": 205,
+    "program": 50097,
+    "channel": 5
+   },
+   {
+    "command": 206,
+    "program": 50251,
+    "channel": 5
+   },
+   {
+    "command": 207,
+    "program": 50394,
+    "channel": 5
+   },
+   {
+    "command": 205,
+    "program": 50094,
+    "channel": 4
+   },
+   {
+    "command": 206,
+    "program": 50248,
+    "channel": 4
+   },
+   {
+    "command": 207,
+    "program": 50391,
+    "channel": 4
+   },
+   {
+    "command": 253,
+    "program": 50497,
+    "channel": 2
+   },
+   {
+    "command": 254,
+    "program": 50543,
+    "channel": 2
+   },
+   {
+    "command": 255,
+    "program": 50595,
+    "channel": 2
+   },
+   {
+    "command": 248,
+    "program": 53538,
+    "channel": 7
+   },
+   {
+    "command": 247,
+    "program": 53106,
+    "channel": 3
+   },
+   {
+    "command": 185,
+    "program": 48206,
+    "channel": 2
+   },
+   {
+    "command": 237,
+    "program": 48269,
+    "channel": 2
+   },
+   {
+    "command": 248,
+    "program": 53535,
+    "channel": 6
+   },
+   {
+    "command": 248,
+    "program": 53532,
+    "channel": 5
+   },
+   {
+    "command": 248,
+    "program": 53529,
+    "channel": 4
+   },
+   {
+    "command": 184,
+    "program": 48120,
+    "channel": 2
+   }
+  ],
+  "id": 0
+ },
+ {
+  "bytes": "93b36e",
+  "variants": 3,
+  "uses": [
+   {
+    "command": 173,
+    "program": 47195,
+    "channel": 7
+   },
+   {
+    "command": 173,
+    "program": 47138,
+    "channel": 6
+   },
+   {
+    "command": 173,
+    "program": 47089,
+    "channel": 5
+   },
+   {
+    "command": 173,
+    "program": 47032,
+    "channel": 4
+   },
+   {
+    "command": 173,
+    "program": 46950,
+    "channel": 3
+   },
+   {
+    "command": 199,
+    "program": 49538,
+    "channel": 7
+   },
+   {
+    "command": 199,
+    "program": 49500,
+    "channel": 6
+   },
+   {
+    "command": 199,
+    "program": 49458,
+    "channel": 5
+   },
+   {
+    "command": 199,
+    "program": 49414,
+    "channel": 4
+   },
+   {
+    "command": 199,
+    "program": 49369,
+    "channel": 3
+   },
+   {
+    "command": 202,
+    "program": 49854,
+    "channel": 3
+   },
+   {
+    "command": 202,
+    "program": 49823,
+    "channel": 2
+   },
+   {
+    "command": 251,
+    "program": 47425,
+    "channel": 7
+   },
+   {
+    "command": 251,
+    "program": 47393,
+    "channel": 5
+   },
+   {
+    "command": 251,
+    "program": 47362,
+    "channel": 4
+   },
+   {
+    "command": 251,
+    "program": 47334,
+    "channel": 3
+   },
+   {
+    "command": 251,
+    "program": 47301,
+    "channel": 2
+   },
+   {
+    "command": 251,
+    "program": 47264,
+    "channel": 1
+   },
+   {
+    "command": 234,
+    "program": 47511,
+    "channel": 1
+   },
+   {
+    "command": 199,
+    "program": 49348,
+    "channel": 2
+   }
+  ],
+  "id": 1
+ },
+ {
+  "bytes": "93b2c0a8ffe0",
+  "variants": 8,
+  "uses": [
+   {
+    "command": 187,
+    "program": 48371,
+    "channel": 0
+   },
+   {
+    "command": 232,
+    "program": 51251,
+    "channel": 0
+   },
+   {
+    "command": 229,
+    "program": 51162,
+    "channel": 0
+   },
+   {
+    "command": 230,
+    "program": 51191,
+    "channel": 0
+   },
+   {
+    "command": 231,
+    "program": 51221,
+    "channel": 0
+   },
+   {
+    "command": 186,
+    "program": 48298,
+    "channel": 0
+   },
+   {
+    "command": 252,
+    "program": 53604,
+    "channel": 0
+   },
+   {
+    "command": 194,
+    "program": 48728,
+    "channel": 0
+   },
+   {
+    "command": 193,
+    "program": 48671,
+    "channel": 0
+   },
+   {
+    "command": 204,
+    "program": 50016,
+    "channel": 0
+   },
+   {
+    "command": 200,
+    "program": 49577,
+    "channel": 0
+   },
+   {
+    "command": 213,
+    "program": 51016,
+    "channel": 0
+   },
+   {
+    "command": 214,
+    "program": 51058,
+    "channel": 0
+   },
+   {
+    "command": 215,
+    "program": 51084,
+    "channel": 0
+   },
+   {
+    "command": 195,
+    "program": 48777,
+    "channel": 0
+   },
+   {
+    "command": 234,
+    "program": 47503,
+    "channel": 0
+   },
+   {
+    "command": 242,
+    "program": 52452,
+    "channel": 0
+   },
+   {
+    "command": 216,
+    "program": 51110,
+    "channel": 0
+   },
+   {
+    "command": 251,
+    "program": 47256,
+    "channel": 0
+   },
+   {
+    "command": 192,
+    "program": 48640,
+    "channel": 0
+   }
+  ],
+  "id": 2
+ },
+ {
+  "bytes": "93b3c6",
+  "variants": 11,
+  "uses": [
+   {
+    "command": 187,
+    "program": 48379,
+    "channel": 1
+   },
+   {
+    "command": 232,
+    "program": 51272,
+    "channel": 3
+   },
+   {
+    "command": 232,
+    "program": 51259,
+    "channel": 1
+   },
+   {
+    "command": 229,
+    "program": 51170,
+    "channel": 1
+   },
+   {
+    "command": 230,
+    "program": 51199,
+    "channel": 1
+   },
+   {
+    "command": 231,
+    "program": 51229,
+    "channel": 1
+   },
+   {
+    "command": 186,
+    "program": 48306,
+    "channel": 1
+   },
+   {
+    "command": 187,
+    "program": 48392,
+    "channel": 3
+   },
+   {
+    "command": 186,
+    "program": 48319,
+    "channel": 3
+   },
+   {
+    "command": 242,
+    "program": 52524,
+    "channel": 4
+   },
+   {
+    "command": 242,
+    "program": 52521,
+    "channel": 3
+   },
+   {
+    "command": 232,
+    "program": 51269,
+    "channel": 2
+   },
+   {
+    "command": 229,
+    "program": 51183,
+    "channel": 3
+   },
+   {
+    "command": 229,
+    "program": 51180,
+    "channel": 2
+   },
+   {
+    "command": 230,
+    "program": 51212,
+    "channel": 3
+   },
+   {
+    "command": 230,
+    "program": 51209,
+    "channel": 2
+   },
+   {
+    "command": 231,
+    "program": 51242,
+    "channel": 3
+   },
+   {
+    "command": 231,
+    "program": 51239,
+    "channel": 2
+   }
+  ],
+  "id": 3
+ },
+ {
+  "bytes": "93b3a6",
+  "variants": 7,
+  "uses": [
+   {
+    "command": 205,
+    "program": 50088,
+    "channel": 3
+   },
+   {
+    "command": 184,
+    "program": 48114,
+    "channel": 1
+   },
+   {
+    "command": 185,
+    "program": 48215,
+    "channel": 3
+   },
+   {
+    "command": 237,
+    "program": 48278,
+    "channel": 3
+   },
+   {
+    "command": 253,
+    "program": 50491,
+    "channel": 1
+   },
+   {
+    "command": 254,
+    "program": 50537,
+    "channel": 1
+   },
+   {
+    "command": 255,
+    "program": 50589,
+    "channel": 1
+   },
+   {
+    "command": 206,
+    "program": 50226,
+    "channel": 3
+   },
+   {
+    "command": 207,
+    "program": 50369,
+    "channel": 3
+   },
+   {
+    "command": 240,
+    "program": 52327,
+    "channel": 3
+   },
+   {
+    "command": 206,
+    "program": 50223,
+    "channel": 2
+   },
+   {
+    "command": 207,
+    "program": 50366,
+    "channel": 2
+   },
+   {
+    "command": 206,
+    "program": 50220,
+    "channel": 1
+   },
+   {
+    "command": 207,
+    "program": 50363,
+    "channel": 1
+   },
+   {
+    "command": 247,
+    "program": 53339,
+    "channel": 7
+   },
+   {
+    "command": 205,
+    "program": 50085,
+    "channel": 2
+   },
+   {
+    "command": 205,
+    "program": 50082,
+    "channel": 1
+   }
+  ],
+  "id": 4
+ },
+ {
+  "bytes": "8c5d9715009714008f07",
+  "variants": 14,
+  "uses": [
+   {
+    "command": 80,
+    "program": 46353,
+    "channel": 1
+   },
+   {
+    "command": 81,
+    "program": 46372,
+    "channel": 1
+   },
+   {
+    "command": 82,
+    "program": 46386,
+    "channel": 2
+   },
+   {
+    "command": 82,
+    "program": 46391,
+    "channel": 1
+   },
+   {
+    "command": 82,
+    "program": 46394,
+    "channel": 0
+   },
+   {
+    "command": 83,
+    "program": 46418,
+    "channel": 0
+   },
+   {
+    "command": 88,
+    "program": 46526,
+    "channel": 0
+   },
+   {
+    "command": 80,
+    "program": 46348,
+    "channel": 0
+   },
+   {
+    "command": 81,
+    "program": 46367,
+    "channel": 0
+   },
+   {
+    "command": 85,
+    "program": 46477,
+    "channel": 1
+   },
+   {
+    "command": 85,
+    "program": 46480,
+    "channel": 0
+   },
+   {
+    "command": 86,
+    "program": 46471,
+    "channel": 1
+   },
+   {
+    "command": 86,
+    "program": 46474,
+    "channel": 0
+   },
+   {
+    "command": 87,
+    "program": 46496,
+    "channel": 0
+   },
+   {
+    "command": 89,
+    "program": 46564,
+    "channel": 0
+   }
+  ],
+  "id": 5
+ },
+ {
+  "bytes": "935e88",
+  "variants": 8,
+  "uses": [
+   {
+    "command": 9,
+    "program": 30643,
+    "channel": 7
+   },
+   {
+    "command": 24,
+    "program": 40998,
+    "channel": 7
+   },
+   {
+    "command": 65,
+    "program": 43817,
+    "channel": 7
+   },
+   {
+    "command": 18,
+    "program": 37181,
+    "channel": 7
+   },
+   {
+    "command": 64,
+    "program": 43494,
+    "channel": 7
+   },
+   {
+    "command": 6,
+    "program": 28014,
+    "channel": 7
+   },
+   {
+    "command": 5,
+    "program": 28440,
+    "channel": 7
+   },
+   {
+    "command": 28,
+    "program": 42168,
+    "channel": 7
+   },
+   {
+    "command": 27,
+    "program": 41876,
+    "channel": 7
+   },
+   {
+    "command": 21,
+    "program": 39759,
+    "channel": 7
+   },
+   {
+    "command": 26,
+    "program": 41584,
+    "channel": 7
+   },
+   {
+    "command": 25,
+    "program": 41291,
+    "channel": 7
+   },
+   {
+    "command": 15,
+    "program": 33692,
+    "channel": 7
+   },
+   {
+    "command": 30,
+    "program": 42231,
+    "channel": 5
+   }
+  ],
+  "id": 6
+ },
+ {
+  "bytes": "935ede",
+  "variants": 5,
+  "uses": [
+   {
+    "command": 24,
+    "program": 40908,
+    "channel": 5
+   },
+   {
+    "command": 24,
+    "program": 40835,
+    "channel": 1
+   },
+   {
+    "command": 8,
+    "program": 29089,
+    "channel": 1
+   },
+   {
+    "command": 28,
+    "program": 42074,
+    "channel": 5
+   },
+   {
+    "command": 28,
+    "program": 41989,
+    "channel": 1
+   },
+   {
+    "command": 27,
+    "program": 41782,
+    "channel": 5
+   },
+   {
+    "command": 27,
+    "program": 41697,
+    "channel": 1
+   },
+   {
+    "command": 26,
+    "program": 41489,
+    "channel": 5
+   },
+   {
+    "command": 26,
+    "program": 41404,
+    "channel": 1
+   },
+   {
+    "command": 25,
+    "program": 41196,
+    "channel": 5
+   },
+   {
+    "command": 25,
+    "program": 41111,
+    "channel": 1
+   }
+  ],
+  "id": 7
+ },
+ {
+  "bytes": "935d7a",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 18,
+    "program": 36775,
+    "channel": 0
+   },
+   {
+    "command": 23,
+    "program": 40156,
+    "channel": 0
+   },
+   {
+    "command": 20,
+    "program": 39010,
+    "channel": 0
+   },
+   {
+    "command": 3,
+    "program": 24642,
+    "channel": 0
+   },
+   {
+    "command": 2,
+    "program": 24642,
+    "channel": 4
+   },
+   {
+    "command": 10,
+    "program": 31026,
+    "channel": 0
+   },
+   {
+    "command": 17,
+    "program": 36775,
+    "channel": 5
+   },
+   {
+    "command": 8,
+    "program": 29074,
+    "channel": 0
+   },
+   {
+    "command": 21,
+    "program": 39693,
+    "channel": 0
+   },
+   {
+    "command": 16,
+    "program": 34336,
+    "channel": 0
+   }
+  ],
+  "id": 8
+ },
+ {
+  "bytes": "935e72",
+  "variants": 4,
+  "uses": [
+   {
+    "command": 9,
+    "program": 30115,
+    "channel": 4
+   },
+   {
+    "command": 4,
+    "program": 25980,
+    "channel": 5
+   },
+   {
+    "command": 4,
+    "program": 25577,
+    "channel": 4
+   },
+   {
+    "command": 15,
+    "program": 33686,
+    "channel": 6
+   },
+   {
+    "command": 23,
+    "program": 40312,
+    "channel": 4
+   },
+   {
+    "command": 65,
+    "program": 43680,
+    "channel": 3
+   },
+   {
+    "command": 64,
+    "program": 43280,
+    "channel": 3
+   },
+   {
+    "command": 65,
+    "program": 43683,
+    "channel": 1
+   },
+   {
+    "command": 64,
+    "program": 43283,
+    "channel": 1
+   },
+   {
+    "command": 12,
+    "program": 32841,
+    "channel": 3
+   }
+  ],
+  "id": 9
+ },
+ {
+  "bytes": "93b4608f08",
+  "variants": 8,
+  "uses": [
+   {
+    "command": 216,
+    "program": 51127,
+    "channel": 3
+   },
+   {
+    "command": 213,
+    "program": 51033,
+    "channel": 3
+   },
+   {
+    "command": 216,
+    "program": 51124,
+    "channel": 2
+   },
+   {
+    "command": 213,
+    "program": 51030,
+    "channel": 2
+   },
+   {
+    "command": 242,
+    "program": 52464,
+    "channel": 2
+   },
+   {
+    "command": 242,
+    "program": 52461,
+    "channel": 1
+   },
+   {
+    "command": 214,
+    "program": 51075,
+    "channel": 3
+   },
+   {
+    "command": 214,
+    "program": 51072,
+    "channel": 2
+   },
+   {
+    "command": 215,
+    "program": 51101,
+    "channel": 3
+   },
+   {
+    "command": 215,
+    "program": 51098,
+    "channel": 2
+   }
+  ],
+  "id": 10
+ },
+ {
+  "bytes": "93b3ee",
+  "variants": 9,
+  "uses": [
+   {
+    "command": 246,
+    "program": 48076,
+    "channel": 7
+   },
+   {
+    "command": 190,
+    "program": 47847,
+    "channel": 3
+   },
+   {
+    "command": 246,
+    "program": 48073,
+    "channel": 6
+   },
+   {
+    "command": 246,
+    "program": 48070,
+    "channel": 5
+   },
+   {
+    "command": 246,
+    "program": 48067,
+    "channel": 4
+   },
+   {
+    "command": 246,
+    "program": 48064,
+    "channel": 3
+   },
+   {
+    "command": 246,
+    "program": 48061,
+    "channel": 2
+   },
+   {
+    "command": 246,
+    "program": 48058,
+    "channel": 1
+   },
+   {
+    "command": 190,
+    "program": 47844,
+    "channel": 2
+   },
+   {
+    "command": 190,
+    "program": 47841,
+    "channel": 1
+   }
+  ],
+  "id": 11
+ },
+ {
+  "bytes": "935e7d",
+  "variants": 4,
+  "uses": [
+   {
+    "command": 9,
+    "program": 29860,
+    "channel": 3
+   },
+   {
+    "command": 22,
+    "program": 40005,
+    "channel": 6
+   },
+   {
+    "command": 20,
+    "program": 39081,
+    "channel": 1
+   },
+   {
+    "command": 6,
+    "program": 27348,
+    "channel": 1
+   },
+   {
+    "command": 5,
+    "program": 28416,
+    "channel": 5
+   },
+   {
+    "command": 18,
+    "program": 36833,
+    "channel": 3
+   },
+   {
+    "command": 17,
+    "program": 36833,
+    "channel": 6
+   },
+   {
+    "command": 15,
+    "program": 33439,
+    "channel": 2
+   },
+   {
+    "command": 20,
+    "program": 39413,
+    "channel": 6
+   }
+  ],
+  "id": 12
+ },
+ {
+  "bytes": "935e67",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 12,
+    "program": 32830,
+    "channel": 2
+   },
+   {
+    "command": 65,
+    "program": 43669,
+    "channel": 2
+   },
+   {
+    "command": 4,
+    "program": 25566,
+    "channel": 3
+   },
+   {
+    "command": 4,
+    "program": 25555,
+    "channel": 2
+   },
+   {
+    "command": 64,
+    "program": 43269,
+    "channel": 2
+   },
+   {
+    "command": 9,
+    "program": 29691,
+    "channel": 1
+   },
+   {
+    "command": 18,
+    "program": 36922,
+    "channel": 5
+   },
+   {
+    "command": 23,
+    "program": 40301,
+    "channel": 3
+   }
+  ],
+  "id": 13
+ },
+ {
+  "bytes": "935ea7",
+  "variants": 5,
+  "uses": [
+   {
+    "command": 22,
+    "program": 39950,
+    "channel": 1
+   },
+   {
+    "command": 6,
+    "program": 27889,
+    "channel": 6
+   },
+   {
+    "command": 5,
+    "program": 28428,
+    "channel": 6
+   },
+   {
+    "command": 21,
+    "program": 39751,
+    "channel": 6
+   },
+   {
+    "command": 21,
+    "program": 39751,
+    "channel": 4
+   },
+   {
+    "command": 21,
+    "program": 39748,
+    "channel": 2
+   },
+   {
+    "command": 18,
+    "program": 36812,
+    "channel": 1
+   },
+   {
+    "command": 30,
+    "program": 42719,
+    "channel": 6
+   }
+  ],
+  "id": 14
+ },
+ {
+  "bytes": "935f33bb0b94",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 14,
+    "program": 32739,
+    "channel": 7
+   },
+   {
+    "command": 13,
+    "program": 32739,
+    "channel": 7
+   },
+   {
+    "command": 12,
+    "program": 32739,
+    "channel": 7
+   },
+   {
+    "command": 11,
+    "program": 32739,
+    "channel": 7
+   },
+   {
+    "command": 14,
+    "program": 32736,
+    "channel": 6
+   },
+   {
+    "command": 12,
+    "program": 32736,
+    "channel": 6
+   },
+   {
+    "command": 11,
+    "program": 32736,
+    "channel": 6
+   }
+  ],
+  "id": 15
+ },
+ {
+  "bytes": "935f3bbb0a94",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 14,
+    "program": 32698,
+    "channel": 5
+   },
+   {
+    "command": 13,
+    "program": 32698,
+    "channel": 5
+   },
+   {
+    "command": 12,
+    "program": 32698,
+    "channel": 5
+   },
+   {
+    "command": 11,
+    "program": 32698,
+    "channel": 5
+   },
+   {
+    "command": 14,
+    "program": 32695,
+    "channel": 4
+   },
+   {
+    "command": 12,
+    "program": 32695,
+    "channel": 4
+   },
+   {
+    "command": 11,
+    "program": 32695,
+    "channel": 4
+   }
+  ],
+  "id": 16
+ },
+ {
+  "bytes": "93b41e",
+  "variants": 4,
+  "uses": [
+   {
+    "command": 196,
+    "program": 48925,
+    "channel": 7
+   },
+   {
+    "command": 196,
+    "program": 48925,
+    "channel": 6
+   },
+   {
+    "command": 196,
+    "program": 48925,
+    "channel": 5
+   },
+   {
+    "command": 209,
+    "program": 50839,
+    "channel": 7
+   },
+   {
+    "command": 209,
+    "program": 50836,
+    "channel": 6
+   },
+   {
+    "command": 209,
+    "program": 50833,
+    "channel": 5
+   },
+   {
+    "command": 209,
+    "program": 50830,
+    "channel": 4
+   }
+  ],
+  "id": 17
+ },
+ {
+  "bytes": "93c6e5",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 212,
+    "program": 50994,
+    "channel": 6
+   },
+   {
+    "command": 212,
+    "program": 50994,
+    "channel": 5
+   },
+   {
+    "command": 212,
+    "program": 50994,
+    "channel": 4
+   },
+   {
+    "command": 211,
+    "program": 50956,
+    "channel": 6
+   },
+   {
+    "command": 212,
+    "program": 50991,
+    "channel": 3
+   },
+   {
+    "command": 212,
+    "program": 50991,
+    "channel": 2
+   },
+   {
+    "command": 212,
+    "program": 50991,
+    "channel": 1
+   }
+  ],
+  "id": 18
+ },
+ {
+  "bytes": "935ef6",
+  "variants": 5,
+  "uses": [
+   {
+    "command": 24,
+    "program": 40963,
+    "channel": 6
+   },
+   {
+    "command": 8,
+    "program": 29159,
+    "channel": 5
+   },
+   {
+    "command": 8,
+    "program": 29114,
+    "channel": 2
+   },
+   {
+    "command": 28,
+    "program": 42132,
+    "channel": 6
+   },
+   {
+    "command": 27,
+    "program": 41840,
+    "channel": 6
+   },
+   {
+    "command": 26,
+    "program": 41547,
+    "channel": 6
+   },
+   {
+    "command": 25,
+    "program": 41254,
+    "channel": 6
+   }
+  ],
+  "id": 19
+ },
+ {
+  "bytes": "935f03",
+  "variants": 5,
+  "uses": [
+   {
+    "command": 24,
+    "program": 40890,
+    "channel": 2
+   },
+   {
+    "command": 8,
+    "program": 29209,
+    "channel": 7
+   },
+   {
+    "command": 8,
+    "program": 29184,
+    "channel": 6
+   },
+   {
+    "command": 28,
+    "program": 42047,
+    "channel": 2
+   },
+   {
+    "command": 27,
+    "program": 41755,
+    "channel": 2
+   },
+   {
+    "command": 26,
+    "program": 41462,
+    "channel": 2
+   },
+   {
+    "command": 25,
+    "program": 41169,
+    "channel": 2
+   }
+  ],
+  "id": 20
+ },
+ {
+  "bytes": "93b2d0a8027893b3a6",
+  "variants": 4,
+  "uses": [
+   {
+    "command": 253,
+    "program": 50485,
+    "channel": 0
+   },
+   {
+    "command": 254,
+    "program": 50531,
+    "channel": 0
+   },
+   {
+    "command": 255,
+    "program": 50583,
+    "channel": 0
+   },
+   {
+    "command": 206,
+    "program": 50214,
+    "channel": 0
+   },
+   {
+    "command": 207,
+    "program": 50357,
+    "channel": 0
+   },
+   {
+    "command": 205,
+    "program": 50076,
+    "channel": 0
+   },
+   {
+    "command": 184,
+    "program": 48108,
+    "channel": 0
+   }
+  ],
+  "id": 21
+ },
+ {
+  "bytes": "935e54",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 22,
+    "program": 40053,
+    "channel": 7
+   },
+   {
+    "command": 19,
+    "program": 38781,
+    "channel": 7
+   },
+   {
+    "command": 4,
+    "program": 27042,
+    "channel": 7
+   },
+   {
+    "command": 23,
+    "program": 40676,
+    "channel": 7
+   },
+   {
+    "command": 3,
+    "program": 25276,
+    "channel": 7
+   },
+   {
+    "command": 2,
+    "program": 25276,
+    "channel": 7
+   }
+  ],
+  "id": 22
+ },
+ {
+  "bytes": "935f1b",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 19,
+    "program": 38569,
+    "channel": 6
+   },
+   {
+    "command": 19,
+    "program": 38132,
+    "channel": 2
+   },
+   {
+    "command": 23,
+    "program": 40598,
+    "channel": 6
+   },
+   {
+    "command": 23,
+    "program": 40224,
+    "channel": 1
+   },
+   {
+    "command": 19,
+    "program": 38472,
+    "channel": 5
+   },
+   {
+    "command": 19,
+    "program": 38051,
+    "channel": 1
+   }
+  ],
+  "id": 23
+ },
+ {
+  "bytes": "935fa6",
+  "variants": 4,
+  "uses": [
+   {
+    "command": 65,
+    "program": 43769,
+    "channel": 5
+   },
+   {
+    "command": 64,
+    "program": 43403,
+    "channel": 5
+   },
+   {
+    "command": 64,
+    "program": 43357,
+    "channel": 4
+   },
+   {
+    "command": 19,
+    "program": 38338,
+    "channel": 4
+   },
+   {
+    "command": 65,
+    "program": 43766,
+    "channel": 4
+   },
+   {
+    "command": 18,
+    "program": 36933,
+    "channel": 6
+   }
+  ],
+  "id": 24
+ },
+ {
+  "bytes": "935ed1",
+  "variants": 5,
+  "uses": [
+   {
+    "command": 24,
+    "program": 40896,
+    "channel": 3
+   },
+   {
+    "command": 8,
+    "program": 29128,
+    "channel": 4
+   },
+   {
+    "command": 28,
+    "program": 42056,
+    "channel": 3
+   },
+   {
+    "command": 27,
+    "program": 41764,
+    "channel": 3
+   },
+   {
+    "command": 26,
+    "program": 41471,
+    "channel": 3
+   },
+   {
+    "command": 25,
+    "program": 41178,
+    "channel": 3
+   }
+  ],
+  "id": 25
+ },
+ {
+  "bytes": "93b426",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 204,
+    "program": 50037,
+    "channel": 3
+   },
+   {
+    "command": 200,
+    "program": 49637,
+    "channel": 7
+   },
+   {
+    "command": 200,
+    "program": 49620,
+    "channel": 5
+   },
+   {
+    "command": 200,
+    "program": 49603,
+    "channel": 3
+   },
+   {
+    "command": 200,
+    "program": 49585,
+    "channel": 1
+   }
+  ],
+  "id": 26
+ },
+ {
+  "bytes": "938085",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 13,
+    "program": 33187,
+    "channel": 6
+   },
+   {
+    "command": 13,
+    "program": 33134,
+    "channel": 4
+   },
+   {
+    "command": 13,
+    "program": 33078,
+    "channel": 3
+   },
+   {
+    "command": 13,
+    "program": 32963,
+    "channel": 1
+   },
+   {
+    "command": 13,
+    "program": 33019,
+    "channel": 2
+   }
+  ],
+  "id": 27
+ },
+ {
+  "bytes": "93c8c0",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 227,
+    "program": 51657,
+    "channel": 6
+   },
+   {
+    "command": 227,
+    "program": 51617,
+    "channel": 4
+   },
+   {
+    "command": 227,
+    "program": 51563,
+    "channel": 3
+   },
+   {
+    "command": 227,
+    "program": 51452,
+    "channel": 1
+   },
+   {
+    "command": 227,
+    "program": 51506,
+    "channel": 2
+   }
+  ],
+  "id": 28
+ },
+ {
+  "bytes": "935e93",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 9,
+    "program": 30532,
+    "channel": 6
+   },
+   {
+    "command": 6,
+    "program": 27853,
+    "channel": 5
+   },
+   {
+    "command": 6,
+    "program": 27626,
+    "channel": 4
+   },
+   {
+    "command": 6,
+    "program": 27615,
+    "channel": 3
+   },
+   {
+    "command": 6,
+    "program": 27604,
+    "channel": 2
+   }
+  ],
+  "id": 29
+ },
+ {
+  "bytes": "93b2d0a8fff4",
+  "variants": 4,
+  "uses": [
+   {
+    "command": 244,
+    "program": 52721,
+    "channel": 4
+   },
+   {
+    "command": 245,
+    "program": 52867,
+    "channel": 4
+   },
+   {
+    "command": 226,
+    "program": 51278,
+    "channel": 0
+   },
+   {
+    "command": 247,
+    "program": 53093,
+    "channel": 0
+   },
+   {
+    "command": 239,
+    "program": 52132,
+    "channel": 0
+   }
+  ],
+  "id": 30
+ },
+ {
+  "bytes": "a70400935fbe",
+  "variants": 5,
+  "uses": [
+   {
+    "command": 28,
+    "program": 42065,
+    "channel": 4
+   },
+   {
+    "command": 27,
+    "program": 41773,
+    "channel": 4
+   },
+   {
+    "command": 24,
+    "program": 40902,
+    "channel": 4
+   },
+   {
+    "command": 26,
+    "program": 41480,
+    "channel": 4
+   },
+   {
+    "command": 25,
+    "program": 41187,
+    "channel": 4
+   }
+  ],
+  "id": 31
+ },
+ {
+  "bytes": "a70400935d7a935f8ba70c00",
+  "variants": 5,
+  "uses": [
+   {
+    "command": 28,
+    "program": 41914,
+    "channel": 0
+   },
+   {
+    "command": 27,
+    "program": 41622,
+    "channel": 0
+   },
+   {
+    "command": 24,
+    "program": 40763,
+    "channel": 0
+   },
+   {
+    "command": 26,
+    "program": 41329,
+    "channel": 0
+   },
+   {
+    "command": 25,
+    "program": 41036,
+    "channel": 0
+   }
+  ],
+  "id": 32
+ },
+ {
+  "bytes": "935e5f",
+  "variants": 3,
+  "uses": [
+   {
+    "command": 4,
+    "program": 26784,
+    "channel": 6
+   },
+   {
+    "command": 15,
+    "program": 33428,
+    "channel": 1
+   },
+   {
+    "command": 4,
+    "program": 25544,
+    "channel": 1
+   },
+   {
+    "command": 15,
+    "program": 33677,
+    "channel": 5
+   }
+  ],
+  "id": 33
+ },
+ {
+  "bytes": "93b3be",
+  "variants": 3,
+  "uses": [
+   {
+    "command": 247,
+    "program": 53232,
+    "channel": 4
+   },
+   {
+    "command": 184,
+    "program": 48141,
+    "channel": 7
+   },
+   {
+    "command": 247,
+    "program": 53229,
+    "channel": 2
+   },
+   {
+    "command": 184,
+    "program": 48138,
+    "channel": 6
+   }
+  ],
+  "id": 34
+ },
+ {
+  "bytes": "935f108ffba71800",
+  "variants": 4,
+  "uses": [
+   {
+    "command": 21,
+    "program": 39737,
+    "channel": 5
+   },
+   {
+    "command": 21,
+    "program": 39734,
+    "channel": 3
+   },
+   {
+    "command": 21,
+    "program": 39731,
+    "channel": 1
+   },
+   {
+    "command": 8,
+    "program": 29120,
+    "channel": 3
+   }
+  ],
+  "id": 35
+ },
+ {
+  "bytes": "93b40e8f04",
+  "variants": 4,
+  "uses": [
+   {
+    "command": 196,
+    "program": 48872,
+    "channel": 3
+   },
+   {
+    "command": 196,
+    "program": 48869,
+    "channel": 2
+   },
+   {
+    "command": 196,
+    "program": 48866,
+    "channel": 1
+   },
+   {
+    "command": 196,
+    "program": 48863,
+    "channel": 0
+   }
+  ],
+  "id": 36
+ },
+ {
+  "bytes": "935e9dbb0f",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 14,
+    "program": 33375,
+    "channel": 3
+   },
+   {
+    "command": 14,
+    "program": 33330,
+    "channel": 2
+   },
+   {
+    "command": 14,
+    "program": 33285,
+    "channel": 1
+   }
+  ],
+  "id": 37
+ },
+ {
+  "bytes": "935f23",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 15,
+    "program": 33668,
+    "channel": 4
+   },
+   {
+    "command": 15,
+    "program": 33659,
+    "channel": 3
+   },
+   {
+    "command": 10,
+    "program": 31297,
+    "channel": 3
+   }
+  ],
+  "id": 38
+ },
+ {
+  "bytes": "93b488bb0f",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 228,
+    "program": 51869,
+    "channel": 3
+   },
+   {
+    "command": 228,
+    "program": 51826,
+    "channel": 2
+   },
+   {
+    "command": 228,
+    "program": 51783,
+    "channel": 1
+   }
+  ],
+  "id": 39
+ },
+ {
+  "bytes": "93b478",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 212,
+    "program": 51000,
+    "channel": 7
+   },
+   {
+    "command": 210,
+    "program": 50929,
+    "channel": 3
+   },
+   {
+    "command": 211,
+    "program": 50962,
+    "channel": 7
+   }
+  ],
+  "id": 40
+ },
+ {
+  "bytes": "93b4c7",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 244,
+    "program": 52729,
+    "channel": 5
+   },
+   {
+    "command": 245,
+    "program": 52875,
+    "channel": 5
+   },
+   {
+    "command": 243,
+    "program": 52630,
+    "channel": 5
+   }
+  ],
+  "id": 41
+ },
+ {
+  "bytes": "935d7aa7f400935e67",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 65,
+    "program": 43663,
+    "channel": 0
+   },
+   {
+    "command": 64,
+    "program": 43263,
+    "channel": 0
+   },
+   {
+    "command": 15,
+    "program": 33414,
+    "channel": 0
+   }
+  ],
+  "id": 42
+ },
+ {
+  "bytes": "93b430",
+  "variants": 3,
+  "uses": [
+   {
+    "command": 209,
+    "program": 50798,
+    "channel": 3
+   },
+   {
+    "command": 209,
+    "program": 50785,
+    "channel": 2
+   },
+   {
+    "command": 209,
+    "program": 50772,
+    "channel": 1
+   }
+  ],
+  "id": 43
+ },
+ {
+  "bytes": "93b30f93b3968f04",
+  "variants": 3,
+  "uses": [
+   {
+    "command": 183,
+    "program": 47649,
+    "channel": 3
+   },
+   {
+    "command": 183,
+    "program": 47646,
+    "channel": 2
+   },
+   {
+    "command": 183,
+    "program": 47643,
+    "channel": 1
+   }
+  ],
+  "id": 44
+ },
+ {
+  "bytes": "93b3b68ffd",
+  "variants": 3,
+  "uses": [
+   {
+    "command": 239,
+    "program": 52150,
+    "channel": 3
+   },
+   {
+    "command": 184,
+    "program": 48132,
+    "channel": 5
+   },
+   {
+    "command": 184,
+    "program": 48129,
+    "channel": 4
+   }
+  ],
+  "id": 45
+ },
+ {
+  "bytes": "93b504",
+  "variants": 3,
+  "uses": [
+   {
+    "command": 137,
+    "program": 55279,
+    "channel": 3
+   },
+   {
+    "command": 137,
+    "program": 55276,
+    "channel": 2
+   },
+   {
+    "command": 137,
+    "program": 55273,
+    "channel": 1
+   }
+  ],
+  "id": 46
+ },
+ {
+  "bytes": "93b3f68f04",
+  "variants": 3,
+  "uses": [
+   {
+    "command": 191,
+    "program": 47898,
+    "channel": 3
+   },
+   {
+    "command": 191,
+    "program": 47895,
+    "channel": 2
+   },
+   {
+    "command": 191,
+    "program": 47892,
+    "channel": 1
+   }
+  ],
+  "id": 47
+ },
+ {
+  "bytes": "93b38ebb0f8f06",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 182,
+    "program": 47605,
+    "channel": 3
+   },
+   {
+    "command": 182,
+    "program": 47605,
+    "channel": 2
+   }
+  ],
+  "id": 48
+ },
+ {
+  "bytes": "935e20a7f400",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 20,
+    "program": 39259,
+    "channel": 5
+   },
+   {
+    "command": 20,
+    "program": 39111,
+    "channel": 4
+   }
+  ],
+  "id": 49
+ },
+ {
+  "bytes": "935e2da7ffe8",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 20,
+    "program": 39100,
+    "channel": 3
+   },
+   {
+    "command": 20,
+    "program": 39089,
+    "channel": 2
+   }
+  ],
+  "id": 50
+ },
+ {
+  "bytes": "935f8b8f07",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 30,
+    "program": 42476,
+    "channel": 4
+   },
+   {
+    "command": 30,
+    "program": 42242,
+    "channel": 3
+   }
+  ],
+  "id": 51
+ },
+ {
+  "bytes": "935e47bb1e",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 3,
+    "program": 25237,
+    "channel": 6
+   },
+   {
+    "command": 2,
+    "program": 25237,
+    "channel": 6
+   }
+  ],
+  "id": 52
+ },
+ {
+  "bytes": "935e3abb1ea7ffe0",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 3,
+    "program": 24677,
+    "channel": 1
+   },
+   {
+    "command": 2,
+    "program": 24677,
+    "channel": 5
+   }
+  ],
+  "id": 53
+ },
+ {
+  "bytes": "93b49a8f04",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 241,
+    "program": 48016,
+    "channel": 3
+   },
+   {
+    "command": 241,
+    "program": 47978,
+    "channel": 2
+   }
+  ],
+  "id": 54
+ },
+ {
+  "bytes": "93b406",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 193,
+    "program": 48700,
+    "channel": 3
+   },
+   {
+    "command": 193,
+    "program": 48679,
+    "channel": 1
+   }
+  ],
+  "id": 55
+ },
+ {
+  "bytes": "93b3ce8f04",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 189,
+    "program": 48630,
+    "channel": 7
+   },
+   {
+    "command": 189,
+    "program": 48627,
+    "channel": 6
+   }
+  ],
+  "id": 56
+ },
+ {
+  "bytes": "93b3d68f04",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 189,
+    "program": 48598,
+    "channel": 5
+   },
+   {
+    "command": 189,
+    "program": 48595,
+    "channel": 4
+   }
+  ],
+  "id": 57
+ },
+ {
+  "bytes": "93b3de8f04",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 189,
+    "program": 48562,
+    "channel": 3
+   },
+   {
+    "command": 189,
+    "program": 48559,
+    "channel": 2
+   }
+  ],
+  "id": 58
+ },
+ {
+  "bytes": "935fae",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 22,
+    "program": 39975,
+    "channel": 5
+   },
+   {
+    "command": 22,
+    "program": 39972,
+    "channel": 4
+   }
+  ],
+  "id": 59
+ },
+ {
+  "bytes": "93b43abb0b94",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 201,
+    "program": 49695,
+    "channel": 3
+   },
+   {
+    "command": 201,
+    "program": 49692,
+    "channel": 2
+   }
+  ],
+  "id": 60
+ },
+ {
+  "bytes": "935fd8bb5a",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 30,
+    "program": 42874,
+    "channel": 7
+   },
+   {
+    "command": 31,
+    "program": 42871,
+    "channel": 7
+   }
+  ],
+  "id": 61
+ },
+ {
+  "bytes": "935d7a935f638f0ea7ffe8",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 30,
+    "program": 42207,
+    "channel": 0
+   },
+   {
+    "command": 31,
+    "program": 42204,
+    "channel": 0
+   }
+  ],
+  "id": 62
+ },
+ {
+  "bytes": "93b4558ff8",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 226,
+    "program": 51302,
+    "channel": 3
+   },
+   {
+    "command": 202,
+    "program": 49780,
+    "channel": 1
+   }
+  ],
+  "id": 63
+ },
+ {
+  "bytes": "93b2d0a807fca806d8a805b4a80490a8036ca80248a8012493b3ee",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 246,
+    "program": 48052,
+    "channel": 0
+   },
+   {
+    "command": 190,
+    "program": 47835,
+    "channel": 0
+   }
+  ],
+  "id": 64
+ },
+ {
+  "bytes": "b80ba808008c5e8f07971500971400971540",
+  "variants": 2,
+  "uses": [
+   {
+    "command": 84,
+    "program": 46438,
+    "channel": 1
+   },
+   {
+    "command": 84,
+    "program": 46443,
+    "channel": 0
+   }
+  ],
+  "id": 65
+ },
+ {
+  "bytes": "935d8a935e9dbb0f",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 14,
+    "program": 33237,
+    "channel": 0
+   }
+  ],
+  "id": 66
+ },
+ {
+  "bytes": "935d8a935f1bbb1694",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 13,
+    "program": 32901,
+    "channel": 0
+   }
+  ],
+  "id": 67
+ },
+ {
+  "bytes": "935d8a",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 12,
+    "program": 32817,
+    "channel": 0
+   }
+  ],
+  "id": 68
+ },
+ {
+  "bytes": "93b492bb0f8f06971f1e",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 195,
+    "program": 48796,
+    "channel": 3
+   }
+  ],
+  "id": 69
+ },
+ {
+  "bytes": "93b4bca8f400",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 242,
+    "program": 52554,
+    "channel": 7
+   }
+  ],
+  "id": 70
+ },
+ {
+  "bytes": "93b4b28ffca8f400",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 242,
+    "program": 52543,
+    "channel": 6
+   }
+  ],
+  "id": 71
+ },
+ {
+  "bytes": "93b4a28f05a80c00",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 242,
+    "program": 52532,
+    "channel": 5
+   }
+  ],
+  "id": 72
+ },
+ {
+  "bytes": "935d7a935e93",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 9,
+    "program": 29403,
+    "channel": 0
+   }
+  ],
+  "id": 73
+ },
+ {
+  "bytes": "93b3e68f04",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 189,
+    "program": 48535,
+    "channel": 1
+   }
+  ],
+  "id": 74
+ },
+ {
+  "bytes": "93b2c0a8048093b3e68f04",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 189,
+    "program": 48529,
+    "channel": 0
+   }
+  ],
+  "id": 75
+ },
+ {
+  "bytes": "970bcf970c2d970d0294",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 22,
+    "program": 39881,
+    "channel": 0
+   }
+  ],
+  "id": 76
+ },
+ {
+  "bytes": "935d7a935f1ba70c00",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 19,
+    "program": 37929,
+    "channel": 0
+   }
+  ],
+  "id": 77
+ },
+ {
+  "bytes": "93b442bb0a94",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 201,
+    "program": 49653,
+    "channel": 1
+   }
+  ],
+  "id": 78
+ },
+ {
+  "bytes": "93b2d0a8ffd093b442bb0a94",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 201,
+    "program": 49647,
+    "channel": 0
+   }
+  ],
+  "id": 79
+ },
+ {
+  "bytes": "935fb6bb06",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 23,
+    "program": 40439,
+    "channel": 5
+   }
+  ],
+  "id": 80
+ },
+ {
+  "bytes": "93b2d093b36ebb1694",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 227,
+    "program": 51392,
+    "channel": 0
+   }
+  ],
+  "id": 81
+ },
+ {
+  "bytes": "93b4d78f04bb18",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 252,
+    "program": 53612,
+    "channel": 1
+   }
+  ],
+  "id": 82
+ },
+ {
+  "bytes": "93b492bb0f8f02971f23",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 235,
+    "program": 49208,
+    "channel": 3
+   }
+  ],
+  "id": 83
+ },
+ {
+  "bytes": "935fe8",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 20,
+    "program": 39509,
+    "channel": 7
+   }
+  ],
+  "id": 84
+ },
+ {
+  "bytes": "935fe0",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 30,
+    "program": 42713,
+    "channel": 2
+   }
+  ],
+  "id": 85
+ },
+ {
+  "bytes": "93b2d093b3968f04",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 241,
+    "program": 47920,
+    "channel": 0
+   }
+  ],
+  "id": 86
+ },
+ {
+  "bytes": "93b40693be3f",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 194,
+    "program": 48759,
+    "channel": 3
+   }
+  ],
+  "id": 87
+ },
+ {
+  "bytes": "93b40693be2a",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 194,
+    "program": 48736,
+    "channel": 1
+   }
+  ],
+  "id": 88
+ },
+ {
+  "bytes": "935d7a935ea7",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 6,
+    "program": 27217,
+    "channel": 0
+   }
+  ],
+  "id": 89
+ },
+ {
+  "bytes": "93b997",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 234,
+    "program": 47582,
+    "channel": 3
+   }
+  ],
+  "id": 90
+ },
+ {
+  "bytes": "936a51",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 5,
+    "program": 28404,
+    "channel": 4
+   }
+  ],
+  "id": 91
+ },
+ {
+  "bytes": "93b2d093b488bb0f",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 228,
+    "program": 51737,
+    "channel": 0
+   }
+  ],
+  "id": 92
+ },
+ {
+  "bytes": "93b2c093b4308f06",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 209,
+    "program": 50756,
+    "channel": 0
+   }
+  ],
+  "id": 93
+ },
+ {
+  "bytes": "93b44a",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 226,
+    "program": 51291,
+    "channel": 2
+   }
+  ],
+  "id": 94
+ },
+ {
+  "bytes": "93b2c093b44a",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 202,
+    "program": 49766,
+    "channel": 0
+   }
+  ],
+  "id": 95
+ },
+ {
+  "bytes": "93b2d0a80120a800c0a8006093b30f93b3968f04",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 183,
+    "program": 47637,
+    "channel": 0
+   }
+  ],
+  "id": 96
+ },
+ {
+  "bytes": "93b2e0a80c0093c6e5",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 212,
+    "program": 50988,
+    "channel": 0
+   }
+  ],
+  "id": 97
+ },
+ {
+  "bytes": "93b2d0a8012ca800c8a8006493b504",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 137,
+    "program": 55267,
+    "channel": 0
+   }
+  ],
+  "id": 98
+ },
+ {
+  "bytes": "93b2d0a80384a80258a8012c93b3f68f04",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 191,
+    "program": 47886,
+    "channel": 0
+   }
+  ],
+  "id": 99
+ },
+ {
+  "bytes": "93b480a8ffe0",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 210,
+    "program": 50917,
+    "channel": 2
+   }
+  ],
+  "id": 100
+ },
+ {
+  "bytes": "93b39e",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 188,
+    "program": 48498,
+    "channel": 1
+   }
+  ],
+  "id": 101
+ },
+ {
+  "bytes": "93b2d0a8016c93b39e",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 188,
+    "program": 48492,
+    "channel": 0
+   }
+  ],
+  "id": 102
+ },
+ {
+  "bytes": "93b2d093b4c7",
+  "variants": 1,
+  "uses": [
+   {
+    "command": 243,
+    "program": 52627,
+    "channel": 4
+   }
+  ],
+  "id": 103
+ }
+]

@@ -1,0 +1,679 @@
+:root {
+  --ink: #e8e9ec;
+  --dim: #9aa0ab;
+  --bg: #15171c;
+  --panel: #1d2026;
+  --line: #2c313a;
+  --dac: #e2a03f;
+  --cvsd: #4aa3df;
+  --edited: #58c26a;
+  --accent: #4aa3df;
+}
+
+* { box-sizing: border-box; }
+
+/* `display` on a rule beats the hidden attribute's own `display: none`,
+   so say it louder once rather than guarding every layout rule. */
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 14px/1.5 "Segoe UI", system-ui, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+h1 { font-size: 17px; margin: 0; font-weight: 600; letter-spacing: .2px; }
+h1 span { color: var(--accent); }
+h2 { font-size: 15px; margin: 0 0 8px; font-weight: 600; }
+
+#game { color: var(--dim); font-size: 13px; }
+.actions { margin-left: auto; display: flex; gap: 8px; }
+
+button, .pick span {
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #10131a;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.quiet, .pick span {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+  font-weight: 500;
+}
+
+button:hover, .pick span:hover { filter: brightness(1.12); }
+button:disabled { opacity: .45; cursor: default; filter: none; }
+
+.pick { display: inline-block; }
+.pick input { display: none; }
+.pick.wide { display: block; margin-top: 10px; }
+.pick.wide span { display: block; text-align: center; }
+
+main { padding: 24px; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+/* -- drop zone -- */
+
+.dropzone {
+  padding: 48px 32px;
+  text-align: center;
+  border: 2px dashed var(--line);
+  border-radius: 10px;
+  transition: border-color .15s, background .15s;
+}
+.dropzone.over { border-color: var(--accent); background: #1b222c; }
+.dropzone p { margin: 6px 0; color: var(--dim); }
+.muted { color: var(--dim); font-size: 13px; }
+.error { color: #e2704a; min-height: 20px; }
+
+#sockets { list-style: none; padding: 0; margin: 18px 0 0; }
+#sockets li { display: inline-block; margin: 0 6px; color: var(--edited); font-variant-numeric: tabular-nums; }
+
+/* -- workspace -- */
+
+#workspace { display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
+
+/* -- the chip, drawn as the package it is -- */
+
+.chip { margin: 0 0 30px; display: flex; align-items: stretch; gap: 0; }
+
+.pins { display: flex; flex-direction: column; justify-content: space-around; padding: 26px 0 10px; }
+.pins i {
+  display: block;
+  width: 13px;
+  height: 7px;
+  background: linear-gradient(#cfd4da, #8a9099 60%, #6b7076);
+  border-radius: 1px;
+  box-shadow: 0 1px 1px #0008;
+}
+.pins.left i { border-radius: 2px 0 0 2px; }
+.pins.right i { border-radius: 0 2px 2px 0; }
+
+.body {
+  flex: 1;
+  position: relative;
+  padding: 26px 14px 12px;
+  border-radius: 7px;
+  background: linear-gradient(#32363d, #24272c 22%, #1f2227);
+  box-shadow: inset 0 1px 0 #ffffff14, 0 3px 10px #0006;
+}
+/* The half-moon that marks pin 1 on a real package. */
+.notch {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  width: 26px;
+  height: 13px;
+  margin-left: -13px;
+  border-radius: 0 0 14px 14px;
+  background: var(--bg);
+  box-shadow: inset 0 -1px 2px #0009;
+}
+.silk {
+  position: absolute;
+  top: 7px;
+  left: 16px;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  color: #9aa0ab;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+.silk b { color: #e8e9ec; font-weight: 600; letter-spacing: 2px; }
+.die { background: #15171a; padding: 5px; border-radius: 3px; }
+
+.page {
+  position: relative;
+  height: 20px;
+  margin-bottom: 2px;
+  background: #22252b;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.page:last-child { margin-bottom: 0; }
+.page .label {
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  font-size: 10px;
+  color: #6b7280;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: 0;
+  padding: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  min-width: 2px;
+  /* The silhouette is painted in the block's colour over a dark bed,
+     so a loud passage reads as more light rather than more ink. */
+  background-color: #191c21;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* Blocks sit back to back filling each page, so without a divider
+     two sounds read as one. box-sizing keeps the width honest. */
+  border-right: 1px solid #05070a;
+  box-shadow: inset -1px 0 0 #ffffff26;
+}
+.block:hover { filter: brightness(1.45); }
+.block.sel { outline: 2px solid #fff; outline-offset: -2px; z-index: 3; }
+.block.marked::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  opacity: .75;
+}
+
+.legend { display: flex; gap: 16px; margin: 0 0 16px; color: var(--dim); font-size: 12px; }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+
+/* -- detail -- */
+
+#detail { padding: 18px; position: sticky; top: 130px; }
+#chosen-title { font-variant-numeric: tabular-nums; }
+dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0 0 14px; font-size: 13px; }
+dt { color: var(--dim); }
+dd { margin: 0; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 8px; }
+.fit { font-size: 12px; color: var(--dim); min-height: 34px; margin: 10px 0 0; }
+.fit.warn { color: var(--dac); }
+
+@media (max-width: 860px) {
+  #workspace { grid-template-columns: 1fr; }
+  #detail { position: static; }
+}
+
+/* -- trimming a replacement -- */
+
+#trim { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 12px; }
+.slider { display: block; margin: 10px 0 12px; }
+.slider span { display: block; font-size: 12px; color: var(--dim); margin-bottom: 6px; }
+.slider input { width: 100%; accent-color: var(--accent); }
+.wide-button { width: 100%; margin-top: 8px; }
+#trim .row, #mtrim .row, #midi-box .row { flex-wrap: wrap; }
+#trim .row button, #mtrim .row button, #midi-box .row button { flex: 1; }
+
+/* -- notes, categories, bundles -- */
+
+.field { display: block; margin-top: 10px; }
+.field > span { display: block; font-size: 12px; color: var(--dim); margin-bottom: 4px; }
+.field input[type=text], .field select, .midi-parts select {
+  width: 100%;
+  font: inherit;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #15171c;
+  color: var(--ink);
+}
+.check { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 13px; }
+.check input { accent-color: var(--accent); width: 16px; height: 16px; }
+.swatch { display: flex; gap: 6px; align-items: center; margin-top: 8px; }
+.swatch input[type=color] {
+  width: 34px; height: 28px; padding: 0; border: 1px solid var(--line);
+  border-radius: 6px; background: none; cursor: pointer;
+}
+.links { display: flex; gap: 8px; margin-top: 10px; }
+.links a {
+  flex: 1; text-align: center; text-decoration: none;
+  padding: 7px 10px; border-radius: 6px; border: 1px solid var(--line); color: var(--ink);
+  font-size: 13px;
+}
+.links a:hover { border-color: var(--accent); }
+
+#spectrum {
+  width: 100%;
+  height: 58px;
+  display: block;
+  margin: 2px 0 10px;
+  background: #15171c;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+
+/* -- brand -- */
+
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand h1 { margin: 0; }
+.brand small { display: block; font-size: 11px; line-height: 1.3; max-width: 46ch; }
+/* Our own mark, in the era's style. The machines' own logos belong to
+   their owners; naming the hardware in text is description, not
+   borrowed branding. */
+.mark {
+  font: 700 15px/1 "Segoe UI", system-ui, sans-serif;
+  letter-spacing: 2px;
+  color: #10131a;
+  background: linear-gradient(#e2a03f, #c8862a);
+  padding: 9px 10px 8px;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 #fff6, 0 2px 6px #0007;
+}
+
+/* -- the machine finder -- */
+
+.finder { margin-top: 20px; padding: 18px 20px 20px; border-top: 1px solid var(--line); }
+.finder h3 { margin: 0 0 10px; font-size: 14px; }
+.finder input[type=search] {
+  width: 100%; font: inherit; padding: 9px 12px; border-radius: 7px;
+  border: 1px solid var(--line); background: #15171c; color: var(--ink);
+}
+#found { list-style: none; padding: 0; margin: 12px 0 10px; }
+#found li {
+  display: flex; align-items: center; gap: 12px;
+  padding: 9px 12px; border: 1px solid var(--line); border-radius: 7px; margin-bottom: 6px;
+}
+#found li span { font-weight: 600; }
+#found li small { color: var(--dim); margin-left: auto; }
+#found li a {
+  color: var(--accent); text-decoration: none; white-space: nowrap;
+  border: 1px solid var(--line); padding: 5px 10px; border-radius: 6px;
+}
+#found li a:hover { border-color: var(--accent); }
+#found li.any { justify-content: center; border-style: dashed; }
+#found li.any a { border: 0; }
+.small { font-size: 12px; }
+
+/* -- one box per socket -- */
+
+#slots { display: flex; gap: 14px; justify-content: center; margin: 22px 0 18px; flex-wrap: wrap; }
+.slot {
+  width: 170px;
+  padding: 14px 12px 12px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: #1a1d22;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+  text-align: center;
+}
+.slot:hover, .slot.over { border-color: var(--accent); background: #1b222c; }
+.slot input { display: none; }
+.slot b { display: block; font-size: 15px; letter-spacing: 2px; }
+.slot .state { display: block; font-size: 12px; color: var(--dim); margin-top: 5px; }
+.slot .crc { display: block; font-size: 11px; color: #6b7280; font-variant-numeric: tabular-nums; margin-top: 2px; }
+.slot.filled { border-style: solid; border-color: #2f4f38; background: #1a2320; }
+.slot.filled .state { color: var(--edited); }
+.slot.bad { border-color: #5a3330; background: #231a1a; }
+.slot.bad .state { color: #e2704a; }
+
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding: 16px 24px 26px;
+  text-align: center;
+}
+footer p { margin: 0 auto; max-width: 78ch; line-height: 1.6; }
+
+/* -- music -- */
+
+.tab { border-color: var(--line); }
+#music { padding: 20px 24px 24px; }
+#music > p { max-width: 90ch; }
+#music-list { list-style: none; padding: 0; margin: 14px 0 0; }
+#music-list li {
+  display: flex; align-items: center; gap: 14px;
+  padding: 9px 14px; border: 1px solid var(--line); border-radius: 7px; margin-bottom: 6px;
+}
+#music-list .cmd {
+  font-weight: 700; font-variant-numeric: tabular-nums; min-width: 48px;
+  color: var(--dac);
+}
+#music-list .notes { color: var(--dim); font-size: 13px; min-width: 110px; }
+#music-list .plays { color: var(--dim); font-size: 12px; }
+.bar {
+  flex: 1;
+  height: 6px;
+  background: #22252b;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width .25s ease;
+}
+#music-list button { margin-left: auto; min-width: 118px; }
+#music-list li.playing { border-color: var(--accent); }
+
+/* -- working indicator -- */
+
+.spinner {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 7px;
+  vertical-align: -2px;
+  border: 2px solid #ffffff3d;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* The row being rendered says so without the list jumping about. */
+#music-list li.working { border-color: var(--dac); }
+#music-list li.working .bar i { animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation-duration: 2.4s; }
+  #music-list li.working .bar i { animation: none; }
+}
+
+/* Already rendered: plays at once, so it should look like it will. */
+#music-list li.ready .cmd::before {
+  content: "●";
+  color: var(--edited);
+  margin-right: 6px;
+  font-size: 10px;
+  vertical-align: 1px;
+}
+#music-list li.ready button { border-color: #2f4f38; }
+#music-list .hint { color: var(--edited); font-size: 11px; }
+#music-list button:disabled { opacity: .4; }
+
+/* -- icons, flags, tabs at the foot -- */
+
+button i, .pick span i, .links a i, #found li a i { font-size: 12px; opacity: .85; }
+.flag { font-size: 15px; line-height: 1; }
+
+/* The two views are the main thing on the page, so their switch sits
+   under them rather than competing with the file actions up top. */
+/* Their own bar under the header: these switch the whole view, so they
+   should not sit among the buttons that act on files. */
+#tabs {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  display: flex;
+  gap: 8px;
+  padding: 10px 24px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+#tabs .tab { padding: 10px 26px; font-size: 14px; }
+
+/* -- waveform with a playhead -- */
+
+.wave, #spectrum {
+  width: 100%;
+  display: block;
+  background: #15171c;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+.wave { height: 72px; margin: 2px 0 6px; cursor: pointer; }
+#spectrum { height: 46px; margin: 0 0 10px; }
+
+/* -- fit modes -- */
+
+.modes { display: flex; gap: 6px; margin: 10px 0 4px; flex-wrap: wrap; }
+.modes button { flex: 1; min-width: 72px; justify-content: center; padding: 6px 8px; font-size: 13px; }
+.modes button.on { background: var(--accent); border-color: var(--accent); color: #10131a; }
+.mode-hint { font-size: 12px; color: var(--dim); margin: 2px 0 8px; min-height: 30px; }
+
+/* -- music view -- */
+
+#music { display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
+#music-main { padding: 20px 24px 24px; }
+#music-detail { padding: 18px; position: sticky; top: 130px; }
+.bulk { margin: 14px 0 6px; align-items: center; }
+.bar.wide { height: 10px; min-width: 120px; }
+#bulk-count { min-width: 11ch; text-align: right; font-variant-numeric: tabular-nums; }
+/* While a batch runs the bar is the thing to watch. */
+.row.bulk { gap: 12px; }
+#music-list li { cursor: pointer; }
+#music-list li.sel { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+/* -- the flyer -- */
+
+#flyer {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  width: 150px;
+  z-index: 7;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 8px 26px #0009;
+}
+#flyer img { width: 100%; border-radius: 6px; display: block; }
+#flyer img[src=""] { display: none; }
+.flyer-actions { display: flex; gap: 4px; margin-top: 7px; align-items: center; }
+.flyer-actions .pick span, .flyer-actions a, .flyer-actions button {
+  font-size: 11px; padding: 5px 7px; gap: 5px;
+}
+.flyer-actions a { color: var(--ink); text-decoration: none; border: 1px solid var(--line); border-radius: 6px; }
+
+@media (max-width: 860px) {
+  #music { grid-template-columns: 1fr; }
+  #music-detail { position: static; }
+  #flyer { display: none; }
+}
+
+/* -- category chips, wearing their own colour -- */
+
+.cats { display: flex; flex-wrap: wrap; gap: 5px; }
+.chip-cat {
+  font: inherit;
+  font-size: 12px;
+  padding: 4px 10px 4px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  gap: 6px;
+}
+.chip-cat::before {
+  content: "";
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--c, var(--dim));
+  display: inline-block;
+}
+.chip-cat.on { border-color: var(--c, var(--accent)); background: #ffffff12; }
+.chip-cat:hover { border-color: var(--c, var(--accent)); }
+
+#music-list li.marked { border-left: 3px solid var(--edited); }
+.field > span { margin-bottom: 6px; }
+
+/* The flyer is a nicety: it must never sit over the panel you work in. */
+#flyer { opacity: .92; }
+#flyer:hover { opacity: 1; }
+#flyer .flyer-actions { flex-wrap: wrap; }
+
+/* -- labels that change length with the language -- */
+
+/* A translated label is never the same length as the original, so no
+   label is allowed to break mid-phrase: if the bar runs out of room,
+   whole buttons wrap instead and the rows stay readable. */
+button, .pick span, .links a, #tabs .tab, #found li a {
+  white-space: nowrap;
+}
+header .actions { flex-wrap: wrap; justify-content: flex-end; row-gap: 6px; }
+header { flex-wrap: wrap; row-gap: 10px; }
+header .actions button, header .actions .pick span { min-height: 34px; }
+
+/* The detail panel's own labels can wrap -- they are sentences, not
+   buttons -- but the facts list must not push its values around. */
+dt { white-space: nowrap; }
+.fit, .mode-hint, #hint, #music-hint { overflow-wrap: anywhere; }
+
+/* Until there is a flyer this is a pill, not a panel: a fixed corner
+   box with nothing in it would only cover the list behind it. */
+#flyer:not(.has-image) { width: auto; padding: 5px; }
+#flyer:not(.has-image) img { display: none; }
+#flyer:not(.has-image) .flyer-actions { margin: 0; }
+#flyer:not(.has-image) #flyer-close,
+#flyer:not(.has-image) #flyer-ipdb { display: none; }
+#flyer.has-image { width: 150px; }
+
+/* -- settings dialog -- */
+
+dialog {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 24px;
+  width: min(460px, 92vw);
+}
+dialog::backdrop { background: #0009; }
+dialog h2 { margin: 0 0 14px; }
+dialog .row { margin-top: 18px; }
+dialog input[type=text], dialog input[type=number] {
+  width: 100%; font: inherit; padding: 7px 9px; border-radius: 6px;
+  border: 1px solid var(--line); background: #15171c; color: var(--ink);
+}
+
+/* -- loading -- */
+
+.busy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: var(--accent);
+  margin: 14px 0 0;
+  min-height: 22px;
+}
+.dropzone.working { border-color: var(--accent); }
+.dropzone.working .slot, .dropzone.working .pick { opacity: .45; pointer-events: none; }
+
+/* A checkbox that belongs on a row of buttons, not under them. */
+.check.inline { margin: 0; white-space: nowrap; font-size: 13px; }
+.check.inline input { width: 15px; height: 15px; }
+
+/* The inner bar tracks one render; the outer one tracks the batch. */
+.row.inner { gap: 12px; align-items: center; margin: 6px 0 2px; }
+#inner-what { min-width: 22ch; }
+#inner-count { min-width: 17ch; text-align: right; font-variant-numeric: tabular-nums; }
+#inner-bar { height: 5px; }
+#inner-bar i { background: var(--dac); }
+
+/* What a music replacement takes away, one line per borrowed block. */
+.taken { list-style: none; margin: 6px 0 0; padding: 0; font-size: 12px; }
+.taken li { padding: 2px 0 2px 10px; border-left: 3px solid var(--dim); color: var(--dim); }
+.taken li.used { border-left-color: var(--dac); }
+.taken li.free { border-left-color: #4fbf9f; }
+
+/* DAC or CVSD for a music replacement: quality and room side by side. */
+.chips-choice { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0; }
+.chips-choice button { display: flex; flex-direction: column; align-items: flex-start;
+  gap: 3px; text-align: left; white-space: normal; height: auto; padding: 8px 10px; }
+.chips-choice button b { display: flex; gap: 6px; align-items: center; }
+.chips-choice .quality { font-size: 11px; opacity: .85; }
+.chips-choice .room { font-size: 11px; font-variant-numeric: tabular-nums; }
+.chips-choice button:not(.on) { opacity: .6; }
+
+/* Parts of a song compiled from MIDI: a name, then instrument and listen. */
+.midi-parts { list-style: none; margin: 6px 0; padding: 0; display: grid; gap: 8px; }
+.midi-parts .part-name { display: block; font-size: 12px; color: var(--dim); margin-bottom: 3px; }
+.midi-parts .pick-row { display: flex; gap: 6px; align-items: stretch; }
+.midi-parts select { flex: 1; min-width: 0; }
+.midi-parts .audition { flex: none; padding: 0 10px; }
+h3.sub { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--dim); margin: 12px 0 4px; }
+
+/* ---- DCS: the track list and the waveform trimmer ---- */
+#dcs:not([hidden]) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 420px); gap: 16px; }
+.dcs-filter { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0; }
+.dcs-filter .modes { flex: 1; }
+#dcs-search { flex: 1; min-width: 200px; font: inherit; padding: 6px 8px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--panel); color: inherit; }
+#dcs-list { list-style: none; margin: 0; padding: 0; max-height: calc(100vh - 290px); overflow: auto; }
+#dcs-list li { display: grid; grid-template-columns: 64px 36px 92px 1fr auto; gap: 8px; align-items: center;
+  padding: 5px 8px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+#dcs-list li:hover { background: rgba(255, 255, 255, .04); }
+#dcs-list li.sel { background: rgba(74, 163, 223, .16); }
+#dcs-list li.edited .cmd { color: #58c26a; }
+#dcs-list .cmd { font-family: ui-monospace, Consolas, monospace; font-weight: 600; }
+#dcs-list .ch, #dcs-list .len { color: var(--dim); font-variant-numeric: tabular-nums; }
+#dcs-list .notes { color: var(--dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#dcs-list .edited-mark { color: #58c26a; }
+canvas.wave.src { width: 100%; height: 150px; cursor: grab; touch-action: none; margin-top: 6px; }
+.trim-times { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin: 8px 0; font-size: 12px; }
+.trim-times label { display: grid; gap: 2px; color: var(--dim); }
+.trim-times input { width: 88px; font: inherit; padding: 4px 6px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--panel); color: inherit; }
+.trim-len { color: var(--dim); }
+.trim-len b.ok { color: #58c26a; }
+.trim-len b.warn { color: var(--dac); }
+#dcs-trim .row { flex-wrap: wrap; }
+#dcs-trim .row button { flex: 1; }
+
+.trimmer { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin: 10px 0; background: rgba(74, 163, 223, .04); }
+.trimmer h3.sub { margin-top: 0; }
+.dcs-filter .modes button:not(.on) { opacity: .5; }
+
+/* Which board: chooses the empty sockets shown before any file says so. */
+.board-pick { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; justify-content: center; margin: 10px 0; }
+.board-pick > span { align-self: center; color: var(--dim); font-size: 13px; }
+.board-pick button { display: grid; gap: 2px; text-align: left; padding: 8px 12px; height: auto; white-space: normal; }
+.board-pick button small { font-size: 11px; opacity: .8; font-weight: normal; }
+.board-pick button:not(.on) { opacity: .5; }
+
+#dcs-main > p[data-i18n="dcs.intro"] { margin: 2px 2px 14px; line-height: 1.5; max-width: 72ch; }
+#dcs-main { padding: 16px 18px; }
+
+/* DCS: the track list beside the seven ROMs it lives in. */
+.dcs-split { display: grid; grid-template-columns: minmax(360px, 1fr) minmax(0, 1.25fr); gap: 18px; align-items: start; }
+.dcs-split #dcs-list { max-height: calc(100vh - 300px); }
+.dcs-chips { max-height: calc(100vh - 300px); overflow: auto; padding-right: 4px; }
+.dcs-chips .chip { margin-bottom: 18px; }
+.block.dcs { background: #3d6f93; }
+.block.dcs:hover { background: #5a93bd; }
+.block.dcs.hit { background: #e2a03f; box-shadow: 0 0 0 1px #e2a03f, 0 0 8px #e2a03f88; z-index: 2; }
+@media (max-width: 1100px) { .dcs-split { grid-template-columns: 1fr; } }
+
+/* The DCS detail panel breathes like the pre-DCS ones. */
+#dcs-detail { padding: 18px; position: sticky; top: 130px; align-self: start; }
+#dcs-detail h2 { margin: 0 0 10px; }
+#dcs-detail canvas.wave { display: block; width: 100%; margin: 12px 0 10px; }
+#dcs-detail .row { margin: 8px 0; gap: 8px; }
+#dcs-detail .pick.wide { margin-top: 14px; }
+#dcs-detail .muted.small { margin: 8px 0 12px; line-height: 1.45; }
+#dcs-detail .check { margin: 10px 0 4px; }
+#dcs-detail .field { margin-top: 12px; }
+#dcs-done:empty { display: none; }
+@media (max-width: 1100px) { #dcs-detail { position: static; } }
+.dcs-chips .page .label { position: relative; z-index: 3; pointer-events: none; text-shadow: 0 0 3px #000, 0 0 2px #000; }

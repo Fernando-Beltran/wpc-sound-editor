@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editor de sonido WPC</title>
+<link rel="stylesheet" href="/static/vendor/css/fontawesome.css">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="mark">WPC</span>
+    <div>
+      <h1 data-i18n="app.title">Editor de sonido</h1>
+      <small class="muted" data-i18n="app.sub"></small>
+    </div>
+  </div>
+  <div id="game"></div>
+  <div class="actions">
+    <button id="settings-open" class="quiet" data-i18n-title="settings.title">
+      <i class="fa-solid fa-gear"></i></button>
+    <button id="lang" class="quiet"><span id="flag" class="flag"></span><span data-i18n="app.lang"></span></button>
+    <button id="notes-export" class="quiet" hidden data-i18n-title="actions.exportNotesLong">
+      <i class="fa-solid fa-file-export"></i><span data-i18n="actions.exportNotes"></span>
+    </button>
+    <label class="pick" hidden id="notes-import-wrap" data-i18n-title="actions.importNotesLong">
+      <input type="file" id="notes-import" accept=".json">
+      <span><i class="fa-solid fa-file-import"></i><span data-i18n="actions.importNotes"></span></span>
+    </label>
+    <button id="bundle" class="quiet" hidden data-i18n-title="actions.bundleLong">
+      <i class="fa-solid fa-file-zipper"></i><span data-i18n="actions.bundle"></span>
+    </button>
+    <button id="bundle-marked" class="quiet" hidden data-i18n-title="actions.bundleMarkedLong">
+      <i class="fa-solid fa-bookmark"></i><span id="bundle-marked-text"></span>
+    </button>
+    <button id="download" hidden data-i18n-title="actions.downloadLong">
+      <i class="fa-solid fa-microchip"></i><span data-i18n="actions.download"></span>
+    </button>
+    <button id="restart" hidden class="quiet" data-i18n-title="actions.restartLong">
+      <i class="fa-solid fa-rotate-left"></i><span data-i18n="actions.restart"></span>
+    </button>
+  </div>
+</header>
+
+<nav id="tabs" hidden>
+  <button id="tab-map" class="tab">
+    <i class="fa-solid fa-microchip"></i><span data-i18n="tab.map"></span>
+  </button>
+  <button id="tab-music" class="tab quiet">
+    <i class="fa-solid fa-music"></i><span data-i18n="tab.music"></span>
+  </button>
+</nav>
+
+<main>
+
+  <section id="drop" class="panel">
+    <div class="dropzone" id="dropzone">
+      <h2><i class="fa-solid fa-download"></i> <span data-i18n="drop.title"></span></h2>
+      <p data-i18n="drop.sub"></p>
+      <p class="muted" data-i18n="drop.privacy"></p>
+      <div class="board-pick" id="board-pick">
+        <span data-i18n="board.label"></span>
+        <button data-board="wpcs"><b data-i18n="board.pre"></b><small>U18 · U15 · U14 — Twilight Zone…</small></button>
+        <button data-board="dcs"><b data-i18n="board.dcs"></b><small>U2 – U8 — Star Trek: TNG…</small></button>
+      </div>
+      <div id="slots"></div>
+      <label class="pick">
+        <input type="file" id="files" multiple accept=".zip,.rom,.bin,.u14,.u15,.u18,.l1">
+        <span><i class="fa-solid fa-folder-open"></i><span data-i18n="drop.pick"></span></span>
+      </label>
+      <p class="muted small" data-i18n="drop.allAtOnce"></p>
+      <p id="dropbusy" class="busy" hidden>
+        <i class="spinner"></i><span id="dropbusy-text"></span>
+      </p>
+      <p id="dropmsg" class="error"></p>
+    </div>
+
+    <div class="finder">
+      <h3><i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="find.title"></span></h3>
+      <input type="search" id="find" data-i18n-ph="find.placeholder">
+      <ul id="found"></ul>
+      <p class="muted small" data-i18n="find.note"></p>
+    </div>
+  </section>
+
+  <section id="workspace" hidden>
+    <div id="chips"></div>
+
+    <aside id="detail" class="panel">
+      <p class="muted" id="hint" data-i18n="hint"></p>
+
+      <div id="chosen" hidden>
+        <h2 id="chosen-title"></h2>
+        <dl id="chosen-facts"></dl>
+
+        <canvas id="wave" class="wave" width="600" height="110"></canvas>
+        <canvas id="spectrum" width="600" height="110"></canvas>
+
+        <div class="row">
+          <button id="play"><i class="fa-solid fa-play"></i><span data-i18n="detail.play"></span></button>
+          <button id="stop" class="quiet"><i class="fa-solid fa-stop"></i><span data-i18n="detail.stop"></span></button>
+        </div>
+        <div class="row" id="compare" hidden>
+          <button id="play-original" class="quiet">
+            <i class="fa-solid fa-clock-rotate-left"></i><span data-i18n="detail.playOriginal"></span>
+          </button>
+          <button id="revert" class="quiet">
+            <i class="fa-solid fa-arrow-rotate-left"></i><span data-i18n="detail.revert"></span>
+          </button>
+        </div>
+        <div class="links">
+          <a id="save-wav" href="#"><i class="fa-solid fa-file-audio"></i><span data-i18n="detail.saveWav"></span></a>
+        </div>
+
+        <label class="check">
+          <input type="checkbox" id="marked">
+          <span><i class="fa-solid fa-bookmark"></i><span data-i18n="detail.marked"></span></span>
+        </label>
+        <label class="field">
+          <span data-i18n="detail.note"></span>
+          <input type="text" id="note" data-i18n-ph="detail.notePlaceholder">
+        </label>
+        <div class="field">
+          <span data-i18n="detail.category"></span>
+          <div id="category" class="cats"></div>
+        </div>
+        <div class="swatch">
+          <input type="color" id="colour" data-i18n-title="detail.colourClear">
+          <button id="colour-clear" class="quiet">
+            <i class="fa-solid fa-palette"></i><span data-i18n="detail.colourClear"></span>
+          </button>
+        </div>
+
+        <label class="pick wide">
+          <input type="file" id="replace" accept=".wav">
+          <span><i class="fa-solid fa-file-arrow-up"></i><span data-i18n="detail.replace"></span></span>
+        </label>
+
+        <div id="trim" hidden>
+          <p class="fit" id="fit"></p>
+          <div class="modes" id="modes"></div>
+          <p class="mode-hint" id="mode-hint"></p>
+          <label class="slider" id="offset-wrap">
+            <span id="trim-label"></span>
+            <input type="range" id="offset" min="0" max="0" value="0">
+          </label>
+          <div class="row">
+            <button id="hear"><i class="fa-solid fa-headphones"></i><span data-i18n="trim.hear"></span></button>
+            <button id="apply"><i class="fa-solid fa-check"></i><span data-i18n="trim.apply"></span></button>
+          </div>
+          <button id="cancel" class="quiet wide-button">
+            <i class="fa-solid fa-xmark"></i><span data-i18n="trim.cancel"></span>
+          </button>
+        </div>
+        <p id="fit-done" class="fit"></p>
+      </div>
+    </aside>
+  </section>
+
+  <section id="dcs" hidden>
+    <div id="dcs-main" class="panel">
+      <p class="muted" data-i18n="dcs.intro"></p>
+    <div id="dcs-trim" class="trimmer" hidden>
+      <h3 class="sub" id="dcs-trim-title"></h3>
+      <p class="muted small" data-i18n="dcs.trimHelp"></p>
+      <canvas id="dcs-src" class="wave src" width="1200" height="150"></canvas>
+      <div class="trim-times">
+        <label><span data-i18n="dcs.start"></span><input type="number" id="dcs-start" step="0.01" min="0"></label>
+        <label><span data-i18n="dcs.end"></span><input type="number" id="dcs-end" step="0.01" min="0"></label>
+        <span class="trim-len"><span data-i18n="dcs.lengthShort"></span> <b id="dcs-len"></b>
+          · <span data-i18n="dcs.slot"></span> <b id="dcs-slot"></b></span>
+      </div>
+      <div class="row">
+        <button id="dcs-play-sel"><i class="fa-solid fa-play"></i><span data-i18n="dcs.playSel"></span></button>
+        <button id="dcs-stop-sel" class="quiet"><i class="fa-solid fa-stop"></i></button>
+        <button id="dcs-fit-slot" class="quiet"><i class="fa-solid fa-arrows-left-right-to-line"></i><span data-i18n="dcs.fitSlot"></span></button>
+      </div>
+      <label class="field fit-field">
+            <span data-i18n="dcs.fitMode"></span>
+            <select id="dcs-fit">
+              <option value="none" data-i18n="dcs.fitNone"></option>
+              <option value="keep" data-i18n="dcs.fitKeep"></option>
+              <option value="pitch" data-i18n="dcs.fitPitch"></option>
+            </select>
+            <span id="dcs-speed" class="muted small"></span>
+          </label>
+          <label class="check inline"><input type="checkbox" id="dcs-loop" checked><span data-i18n="dcs.loop"></span></label>
+      <label class="check inline"><input type="checkbox" id="dcs-lock"><span data-i18n="dcs.lock"></span></label>
+      <label class="check inline"><input type="checkbox" id="dcs-match" checked><span data-i18n="dcs.match"></span></label>
+      <div class="row">
+        <button id="dcs-hear"><i class="fa-solid fa-microchip"></i><span data-i18n="dcs.hear"></span></button>
+        <button id="dcs-apply"><i class="fa-solid fa-check"></i><span data-i18n="trim.apply"></span></button>
+      </div>
+      <button id="dcs-cancel" class="quiet wide-button">
+        <i class="fa-solid fa-xmark"></i><span data-i18n="trim.cancel"></span>
+      </button>
+      <p id="dcs-report" class="fit"></p>
+    </div>
+      <div class="dcs-filter">
+        <div class="modes" id="dcs-channels"></div>
+        <input type="search" id="dcs-search" data-i18n-ph="dcs.search">
+      </div>
+      <p id="dcs-count" class="muted small"></p>
+      <div class="dcs-split">
+        <ul id="dcs-list"></ul>
+        <div id="dcs-chips" class="dcs-chips"></div>
+      </div>
+    </div>
+    <aside id="dcs-detail" class="panel">
+      <p id="dcs-hint" class="muted" data-i18n="dcs.hint"></p>
+      <div id="dcs-chosen" hidden>
+        <h2 id="dcs-title"></h2>
+        <dl id="dcs-facts"></dl>
+        <canvas id="dcs-wave" class="wave" width="600" height="110"></canvas>
+        <div class="row">
+          <button id="dcs-play"><i class="fa-solid fa-play"></i><span data-i18n="detail.play"></span></button>
+          <button id="dcs-original" class="quiet"><i class="fa-solid fa-clock-rotate-left"></i><span data-i18n="dcs.original"></span></button>
+          <button id="dcs-stop" class="quiet"><i class="fa-solid fa-stop"></i><span data-i18n="detail.stop"></span></button>
+        </div>
+        <p id="dcs-done" class="fit"></p>
+        <button id="dcs-revert" class="quiet wide-button" hidden>
+          <i class="fa-solid fa-rotate-left"></i><span data-i18n="dcs.revert"></span>
+        </button>
+        <label class="pick wide">
+          <input type="file" id="dcs-replace" accept="audio/*,.wav,.mp3,.ogg,.flac">
+          <span><i class="fa-solid fa-file-arrow-up"></i><span data-i18n="dcs.replace"></span></span>
+        </label>
+        <p class="muted small" data-i18n="dcs.explain"></p>
+        <label class="check">
+          <input type="checkbox" id="dcs-marked">
+          <span><i class="fa-solid fa-bookmark"></i><span data-i18n="detail.marked"></span></span>
+        </label>
+        <label class="field">
+          <span data-i18n="detail.note"></span>
+          <input type="text" id="dcs-note" data-i18n-ph="dcs.notePlaceholder">
+        </label>
+      </div>
+    </aside>
+  </section>
+
+  <section id="music" hidden>
+    <div id="music-main" class="panel">
+      <p class="muted" data-i18n="music.intro"></p>
+      <p class="muted small" data-i18n="music.sameRom"></p>
+      <div class="row bulk">
+        <button id="render-all"><i class="fa-solid fa-bolt"></i><span data-i18n="music.renderAll"></span></button>
+        <button id="render-stop" class="quiet" hidden>
+          <i class="fa-solid fa-stop"></i><span data-i18n="music.stopAll"></span>
+        </button>
+        <label class="check inline">
+          <input type="checkbox" id="bulk-play" checked>
+          <span><i class="fa-solid fa-volume-high"></i><span data-i18n="music.playAsYouGo"></span></span>
+        </label>
+        <span class="bar wide" id="bulk-bar" hidden><i></i></span>
+        <span id="bulk-count" class="muted small"></span>
+      </div>
+      <div class="row inner" id="inner-progress" hidden>
+        <span id="inner-what" class="muted small"></span>
+        <span class="bar wide" id="inner-bar"><i></i></span>
+        <span id="inner-count" class="muted small"></span>
+      </div>
+      <p id="music-count" class="muted small"></p>
+      <ul id="music-list"></ul>
+    </div>
+
+    <aside id="music-detail" class="panel">
+      <p class="muted" id="music-hint" data-i18n="music.hint"></p>
+      <div id="music-chosen" hidden>
+        <h2 id="music-title"></h2>
+        <dl id="music-facts"></dl>
+        <canvas id="music-wave" class="wave" width="600" height="110"></canvas>
+        <div class="row">
+          <button id="music-play"><i class="fa-solid fa-play"></i><span data-i18n="detail.play"></span></button>
+          <button id="music-stop" class="quiet"><i class="fa-solid fa-stop"></i><span data-i18n="detail.stop"></span></button>
+        </div>
+        <div class="links">
+          <a id="music-save" href="#"><i class="fa-solid fa-file-audio"></i><span data-i18n="music.saveWav"></span></a>
+        </div>
+
+        <label class="pick wide">
+          <input type="file" id="music-replace" accept=".wav">
+          <span><i class="fa-solid fa-file-arrow-up"></i><span data-i18n="mrep.pick"></span></span>
+        </label>
+        <p class="muted small" data-i18n="mrep.explain"></p>
+        <div class="chips-choice" id="mchip">
+          <button data-chip="dac">
+            <b><i class="fa-solid fa-wave-square"></i><span data-i18n="mrep.dac"></span></b>
+            <span class="quality" data-i18n="mrep.dacQuality"></span>
+            <span class="room" id="mroom-dac"></span>
+          </button>
+          <button data-chip="cvsd">
+            <b><i class="fa-solid fa-microphone-lines"></i><span data-i18n="mrep.cvsd"></span></b>
+            <span class="quality" data-i18n="mrep.cvsdQuality"></span>
+            <span class="room" id="mroom-cvsd"></span>
+          </button>
+        </div>
+        <div id="mtrim" hidden>
+          <p class="fit" id="mfit"></p>
+          <label class="field">
+            <span id="mblocks-label"></span>
+            <input type="text" id="mblocks" spellcheck="false">
+          </label>
+          <ul id="mtaken" class="taken"></ul>
+          <p class="fit warn" id="mshared" hidden></p>
+          <div class="modes" id="mmodes"></div>
+          <label class="slider" id="moffset-wrap">
+            <span id="mtrim-label"></span>
+            <input type="range" id="moffset" min="0" max="0" value="0">
+          </label>
+          <div class="row">
+            <button id="mhear"><i class="fa-solid fa-headphones"></i><span data-i18n="trim.hear"></span></button>
+            <button id="mapply"><i class="fa-solid fa-check"></i><span data-i18n="trim.apply"></span></button>
+          </div>
+          <button id="mcancel" class="quiet wide-button">
+            <i class="fa-solid fa-xmark"></i><span data-i18n="trim.cancel"></span>
+          </button>
+        </div>
+        <p id="mfit-done" class="fit"></p>
+        <button id="music-revert" class="quiet wide-button" hidden>
+          <i class="fa-solid fa-rotate-left"></i><span data-i18n="mrep.revert"></span>
+        </button>
+
+        <label class="pick wide">
+          <input type="file" id="midi-pick" accept=".mid,.midi">
+          <span><i class="fa-solid fa-music"></i><span data-i18n="midi.pick"></span></span>
+        </label>
+        <p class="muted small" data-i18n="midi.explain"></p>
+        <div id="midi-box" hidden>
+          <p class="fit" id="midi-summary"></p>
+          <h3 class="sub" data-i18n="midi.parts"></h3>
+          <ul id="midi-parts" class="midi-parts"></ul>
+          <label class="field">
+            <span data-i18n="midi.priority"></span>
+            <input type="text" id="midi-priority" spellcheck="false">
+          </label>
+          <ul id="midi-channels" class="taken"></ul>
+          <label class="field">
+            <span data-i18n="midi.block"></span>
+            <input type="text" id="midi-block" spellcheck="false">
+          </label>
+          <label class="field">
+            <span data-i18n="midi.fitMode"></span>
+            <select id="midi-fitmode">
+              <option value="cut" data-i18n="midi.fitCut"></option>
+              <option value="thin" data-i18n="midi.fitThin"></option>
+            </select>
+          </label>
+          <label class="check inline">
+            <input type="checkbox" id="midi-loop" checked>
+            <span data-i18n="midi.loop"></span>
+          </label>
+          <label class="check inline">
+            <input type="checkbox" id="midi-drums">
+            <span data-i18n="midi.keepDrums"></span>
+          </label>
+          <p class="fit" id="midi-fit"></p>
+          <p class="fit warn" id="midi-warn" hidden></p>
+          <div class="row">
+            <button id="midi-hear"><i class="fa-solid fa-headphones"></i><span data-i18n="midi.hear"></span></button>
+            <button id="midi-apply"><i class="fa-solid fa-check"></i><span data-i18n="trim.apply"></span></button>
+          </div>
+          <button id="midi-cancel" class="quiet wide-button">
+            <i class="fa-solid fa-xmark"></i><span data-i18n="trim.cancel"></span>
+          </button>
+        </div>
+        <p id="midi-done" class="fit"></p>
+        <label class="check">
+          <input type="checkbox" id="music-marked">
+          <span><i class="fa-solid fa-bookmark"></i><span data-i18n="detail.marked"></span></span>
+        </label>
+        <label class="field">
+          <span data-i18n="detail.note"></span>
+          <input type="text" id="music-note" data-i18n-ph="music.notePlaceholder">
+        </label>
+        <div class="field">
+          <span data-i18n="detail.category"></span>
+          <div id="music-category" class="cats"></div>
+        </div>
+        <div class="swatch">
+          <input type="color" id="music-colour" data-i18n-title="detail.colourClear">
+          <button id="music-colour-clear" class="quiet">
+            <i class="fa-solid fa-palette"></i><span data-i18n="detail.colourClear"></span>
+          </button>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+</main>
+
+
+<aside id="flyer" hidden>
+  <img id="flyer-img" alt="">
+  <div class="flyer-actions">
+    <label class="pick"><input type="file" id="flyer-pick" accept="image/*">
+      <span><i class="fa-solid fa-image"></i><span data-i18n="flyer.pick"></span></span></label>
+    <a id="flyer-ipdb" href="#" target="_blank" rel="noopener">
+      <i class="fa-solid fa-arrow-up-right-from-square"></i><span data-i18n="flyer.ipdb"></span></a>
+    <button id="flyer-url" class="quiet" data-i18n-title="flyer.fromUrl">
+      <i class="fa-solid fa-link"></i></button>
+    <button id="flyer-close" class="quiet"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+</aside>
+
+<dialog id="settings">
+  <h2 data-i18n="settings.title"></h2>
+  <label class="field">
+    <span data-i18n="settings.userAgent"></span>
+    <input type="text" id="set-ua">
+  </label>
+  <label class="field">
+    <span data-i18n="settings.referer"></span>
+    <input type="text" id="set-referer">
+  </label>
+  <label class="field">
+    <span data-i18n="settings.timeout"></span>
+    <input type="number" id="set-timeout" min="1" max="120">
+  </label>
+  <p class="muted small" data-i18n="settings.note"></p>
+  <div class="row">
+    <button id="set-save"><i class="fa-solid fa-check"></i><span data-i18n="settings.save"></span></button>
+    <button id="set-close" class="quiet"><i class="fa-solid fa-xmark"></i><span data-i18n="trim.cancel"></span></button>
+  </div>
+</dialog>
+
+<footer>
+  <p class="muted small" data-i18n="app.trademark"></p>
+</footer>
+
+<audio id="player" hidden></audio>
+<script src="/static/i18n.js"></script>
+<script src="/static/app.js"></script>
+<script src="/static/dcs.js"></script>
+</body>
+</html>

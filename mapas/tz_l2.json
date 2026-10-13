@@ -1,0 +1,2141 @@
+[
+ {
+  "cmd": 0,
+  "writes": 40,
+  "keyon": 8,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 1,
+  "writes": 10,
+  "keyon": 8,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 2,
+  "writes": 757,
+  "keyon": 158,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 3,
+  "writes": 925,
+  "keyon": 174,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 4,
+  "writes": 1257,
+  "keyon": 224,
+  "samples": [
+   "dac:0",
+   "dac:1"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 5,
+  "writes": 360,
+  "keyon": 116,
+  "samples": [
+   "dac:6",
+   "dac:0",
+   "dac:8",
+   "dac:10"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 6,
+  "writes": 1059,
+  "keyon": 136,
+  "samples": [
+   "dac:1",
+   "dac:0",
+   "dac:8",
+   "dac:11",
+   "dac:10",
+   "dac:12",
+   "dac:9"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 7,
+  "writes": 392,
+  "keyon": 50,
+  "samples": [
+   "dac:14",
+   "dac:15",
+   "dac:6",
+   "dac:12",
+   "dac:10",
+   "dac:9",
+   "dac:8",
+   "dac:7"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 8,
+  "writes": 780,
+  "keyon": 68,
+  "samples": [
+   "dac:6"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 9,
+  "writes": 983,
+  "keyon": 309,
+  "samples": [
+   "dac:0",
+   "dac:4",
+   "dac:10"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 10,
+  "writes": 918,
+  "keyon": 149,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 11,
+  "writes": 861,
+  "keyon": 328,
+  "samples": [
+   "dac:0",
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 12,
+  "writes": 1231,
+  "keyon": 404,
+  "samples": [
+   "dac:0",
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 13,
+  "writes": 1255,
+  "keyon": 432,
+  "samples": [
+   "dac:0",
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 14,
+  "writes": 1205,
+  "keyon": 440,
+  "samples": [
+   "dac:0",
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 15,
+  "writes": 629,
+  "keyon": 212,
+  "samples": [
+   "dac:15",
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 16,
+  "writes": 907,
+  "keyon": 87,
+  "samples": [
+   "dac:15",
+   "dac:6",
+   "dac:14",
+   "dac:11",
+   "dac:9",
+   "dac:1",
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 17,
+  "writes": 776,
+  "keyon": 138,
+  "samples": [
+   "dac:0",
+   "dac:1",
+   "dac:6",
+   "dac:8"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 18,
+  "writes": 1595,
+  "keyon": 225,
+  "samples": [
+   "dac:0",
+   "dac:1",
+   "dac:6",
+   "dac:8"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 19,
+  "writes": 721,
+  "keyon": 235,
+  "samples": [
+   "dac:0",
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 20,
+  "writes": 1356,
+  "keyon": 189,
+  "samples": [
+   "dac:0",
+   "dac:1",
+   "dac:6",
+   "dac:15",
+   "dac:10"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 21,
+  "writes": 912,
+  "keyon": 287,
+  "samples": [
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 22,
+  "writes": 1167,
+  "keyon": 249,
+  "samples": [
+   "dac:0",
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 23,
+  "writes": 1361,
+  "keyon": 212,
+  "samples": [
+   "dac:0",
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 24,
+  "writes": 773,
+  "keyon": 290,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 25,
+  "writes": 790,
+  "keyon": 256,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 26,
+  "writes": 836,
+  "keyon": 282,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 27,
+  "writes": 977,
+  "keyon": 357,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 28,
+  "writes": 1093,
+  "keyon": 418,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 29,
+  "writes": 617,
+  "keyon": 122,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 30,
+  "writes": 667,
+  "keyon": 182,
+  "samples": [
+   "dac:11",
+   "dac:49",
+   "dac:37",
+   "dac:30",
+   "dac:43"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 31,
+  "writes": 215,
+  "keyon": 77,
+  "samples": [
+   "dac:43",
+   "dac:49",
+   "dac:37",
+   "dac:30"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 32,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 33,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 34,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 35,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 36,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 37,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 38,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 39,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 40,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 41,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 42,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 43,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 44,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 45,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 46,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 47,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 48,
+  "writes": 10,
+  "keyon": 8,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 49,
+  "writes": 757,
+  "keyon": 158,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 50,
+  "writes": 925,
+  "keyon": 174,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 51,
+  "writes": 1257,
+  "keyon": 224,
+  "samples": [
+   "dac:0",
+   "dac:1"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 52,
+  "writes": 360,
+  "keyon": 116,
+  "samples": [
+   "dac:6",
+   "dac:0",
+   "dac:8",
+   "dac:10"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 53,
+  "writes": 1059,
+  "keyon": 136,
+  "samples": [
+   "dac:1",
+   "dac:0",
+   "dac:8",
+   "dac:11",
+   "dac:10",
+   "dac:12",
+   "dac:9"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 54,
+  "writes": 392,
+  "keyon": 50,
+  "samples": [
+   "dac:14",
+   "dac:15",
+   "dac:6",
+   "dac:12",
+   "dac:10",
+   "dac:9",
+   "dac:8",
+   "dac:7"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 55,
+  "writes": 780,
+  "keyon": 68,
+  "samples": [
+   "dac:6"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 56,
+  "writes": 983,
+  "keyon": 309,
+  "samples": [
+   "dac:0",
+   "dac:4",
+   "dac:10"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 57,
+  "writes": 1595,
+  "keyon": 225,
+  "samples": [
+   "dac:0",
+   "dac:1",
+   "dac:6",
+   "dac:8"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 58,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 59,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 60,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 61,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 62,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 63,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 64,
+  "writes": 1121,
+  "keyon": 168,
+  "samples": [
+   "dac:0",
+   "dac:14",
+   "dac:11",
+   "dac:8",
+   "dac:6"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 65,
+  "writes": 1002,
+  "keyon": 233,
+  "samples": [
+   "dac:0",
+   "dac:15",
+   "dac:7",
+   "dac:14",
+   "dac:9"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 66,
+  "writes": 562,
+  "keyon": 162,
+  "samples": [
+   "dac:0",
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 67,
+  "writes": 1227,
+  "keyon": 163,
+  "samples": [
+   "dac:15",
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 68,
+  "writes": 795,
+  "keyon": 250,
+  "samples": [
+   "dac:15",
+   "dac:6",
+   "dac:0",
+   "dac:14",
+   "dac:10"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 69,
+  "writes": 1289,
+  "keyon": 230,
+  "samples": [
+   "dac:15",
+   "dac:9",
+   "dac:1",
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 70,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 71,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 72,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 73,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 74,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 75,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 76,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 77,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 78,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 79,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 80,
+  "writes": 140,
+  "keyon": 8,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 81,
+  "writes": 140,
+  "keyon": 8,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 82,
+  "writes": 238,
+  "keyon": 33,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 83,
+  "writes": 169,
+  "keyon": 17,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 84,
+  "writes": 294,
+  "keyon": 8,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 85,
+  "writes": 140,
+  "keyon": 8,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 86,
+  "writes": 148,
+  "keyon": 8,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 87,
+  "writes": 95,
+  "keyon": 4,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 88,
+  "writes": 127,
+  "keyon": 14,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 89,
+  "writes": 183,
+  "keyon": 4,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 90,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 91,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 92,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 93,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 94,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 95,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 96,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 97,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 98,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 99,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 100,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 101,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 102,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 103,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 104,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 105,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 106,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 107,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 108,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 109,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 110,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 111,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 112,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 113,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 114,
+  "writes": 8,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 115,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 116,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 117,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 118,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 119,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 120,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 121,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 122,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 123,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 124,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 125,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 126,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 127,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 128,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 129,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:17"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 130,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:18"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 131,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 132,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:20"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 133,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:21"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 134,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:22"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 135,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:23"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 136,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:24"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 137,
+  "writes": 485,
+  "keyon": 20,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 138,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:26"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 139,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 140,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 141,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:29"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 142,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:30"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 143,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:31"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 144,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:32"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 145,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:33"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 146,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 147,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:35"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 148,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:36"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 149,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:37"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 150,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:38"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 151,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:39"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 152,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:40"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 153,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 154,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 155,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:43"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 156,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:44"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 157,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:45"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 158,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:46"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 159,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:47"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 160,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:48"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 161,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:49"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 162,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:50"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 163,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "cvsd:28"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 164,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "cvsd:29"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 165,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "cvsd:30"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 166,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 167,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:31"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 168,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:32"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 169,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:33"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 170,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:61"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 171,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "cvsd:16"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 172,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "cvsd:19"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 173,
+  "writes": 445,
+  "keyon": 166,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 174,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:51"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 175,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "cvsd:3"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 176,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:52"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 177,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:53"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 178,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:54"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 179,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:35"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 180,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:36"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 181,
+  "writes": 292,
+  "keyon": 18,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 182,
+  "writes": 818,
+  "keyon": 230,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 183,
+  "writes": 4170,
+  "keyon": 44,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 184,
+  "writes": 3246,
+  "keyon": 24,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 185,
+  "writes": 1339,
+  "keyon": 20,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 186,
+  "writes": 561,
+  "keyon": 184,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 187,
+  "writes": 945,
+  "keyon": 352,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 188,
+  "writes": 459,
+  "keyon": 8,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 189,
+  "writes": 1182,
+  "keyon": 286,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 190,
+  "writes": 909,
+  "keyon": 20,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 191,
+  "writes": 649,
+  "keyon": 20,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 192,
+  "writes": 562,
+  "keyon": 40,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 193,
+  "writes": 351,
+  "keyon": 62,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 194,
+  "writes": 411,
+  "keyon": 162,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 195,
+  "writes": 1287,
+  "keyon": 382,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 196,
+  "writes": 1281,
+  "keyon": 142,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 197,
+  "writes": 1993,
+  "keyon": 596,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 198,
+  "writes": 2283,
+  "keyon": 600,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 199,
+  "writes": 483,
+  "keyon": 141,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 200,
+  "writes": 572,
+  "keyon": 50,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 201,
+  "writes": 701,
+  "keyon": 216,
+  "samples": [
+   "dac:0",
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 202,
+  "writes": 415,
+  "keyon": 55,
+  "samples": [
+   "dac:0",
+   "dac:8",
+   "dac:10",
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 203,
+  "writes": 603,
+  "keyon": 110,
+  "samples": [
+   "dac:43",
+   "dac:49",
+   "dac:37",
+   "dac:30"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 204,
+  "writes": 377,
+  "keyon": 60,
+  "samples": [
+   "dac:1",
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 205,
+  "writes": 2186,
+  "keyon": 40,
+  "samples": [
+   "dac:15",
+   "dac:14",
+   "dac:13",
+   "dac:12",
+   "dac:11",
+   "dac:10",
+   "dac:9",
+   "dac:8",
+   "dac:7",
+   "dac:6"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 206,
+  "writes": 1546,
+  "keyon": 40,
+  "samples": [
+   "dac:15",
+   "dac:14",
+   "dac:13",
+   "dac:12",
+   "dac:11",
+   "dac:10",
+   "dac:9",
+   "dac:8",
+   "dac:7",
+   "dac:6"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 207,
+  "writes": 1330,
+  "keyon": 40,
+  "samples": [
+   "dac:15",
+   "dac:6",
+   "dac:7",
+   "dac:8",
+   "dac:9",
+   "dac:10",
+   "dac:11",
+   "dac:12"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 208,
+  "writes": 911,
+  "keyon": 178,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 209,
+  "writes": 1653,
+  "keyon": 99,
+  "samples": [
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 210,
+  "writes": 695,
+  "keyon": 15,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 211,
+  "writes": 824,
+  "keyon": 13,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 212,
+  "writes": 562,
+  "keyon": 39,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 213,
+  "writes": 695,
+  "keyon": 190,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 214,
+  "writes": 703,
+  "keyon": 190,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 215,
+  "writes": 703,
+  "keyon": 190,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 216,
+  "writes": 695,
+  "keyon": 198,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 217,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:30"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 218,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:37"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 219,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:43"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 220,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:50"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 221,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:55"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 222,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 223,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 224,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:58"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 225,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:59"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 226,
+  "writes": 491,
+  "keyon": 80,
+  "samples": [
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 227,
+  "writes": 746,
+  "keyon": 210,
+  "samples": [
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 228,
+  "writes": 465,
+  "keyon": 116,
+  "samples": [
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 229,
+  "writes": 700,
+  "keyon": 191,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 230,
+  "writes": 708,
+  "keyon": 191,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 231,
+  "writes": 708,
+  "keyon": 191,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 232,
+  "writes": 692,
+  "keyon": 199,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 233,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [
+   "dac:60"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 234,
+  "writes": 543,
+  "keyon": 118,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 235,
+  "writes": 1021,
+  "keyon": 204,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 236,
+  "writes": 981,
+  "keyon": 204,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 237,
+  "writes": 851,
+  "keyon": 20,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 238,
+  "writes": 4230,
+  "keyon": 30,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 239,
+  "writes": 1987,
+  "keyon": 26,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 240,
+  "writes": 1843,
+  "keyon": 22,
+  "samples": [
+   "dac:8",
+   "dac:7",
+   "dac:11",
+   "dac:10",
+   "dac:9",
+   "dac:6"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 241,
+  "writes": 1344,
+  "keyon": 171,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 242,
+  "writes": 1090,
+  "keyon": 336,
+  "samples": [
+   "dac:15",
+   "dac:16",
+   "dac:0"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 243,
+  "writes": 1403,
+  "keyon": 8,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 244,
+  "writes": 2124,
+  "keyon": 11,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 245,
+  "writes": 2116,
+  "keyon": 11,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 246,
+  "writes": 1458,
+  "keyon": 40,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 247,
+  "writes": 3141,
+  "keyon": 66,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 248,
+  "writes": 2384,
+  "keyon": 86,
+  "samples": [
+   "dac:15"
+  ],
+  "unknown": 0
+ },
+ {
+  "cmd": 249,
+  "writes": 0,
+  "keyon": 0,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 250,
+  "writes": 1050,
+  "keyon": 27,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 251,
+  "writes": 781,
+  "keyon": 156,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 252,
+  "writes": 776,
+  "keyon": 207,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 253,
+  "writes": 773,
+  "keyon": 20,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 254,
+  "writes": 977,
+  "keyon": 20,
+  "samples": [],
+  "unknown": 0
+ },
+ {
+  "cmd": 255,
+  "writes": 1081,
+  "keyon": 20,
+  "samples": [],
+  "unknown": 0
+ }
+]

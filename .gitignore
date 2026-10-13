@@ -1,0 +1,37 @@
+# ---- Never published: ROM images and anything derived from them ----
+# Each user supplies their own dumps; the editor verifies and patches
+# them locally. See README.md, "ROMs".
+TZ/
+STTNG/
+*.rom
+*.ROM
+*.l1
+*.L1
+*.zip
+out/
+cache/
+notas/
+
+# ---- Third-party programs: downloaded by each user, see tools/README.md ----
+tools/pinmame/
+tools/pinmame-debug/
+tools/vgmplay/
+tools/dcsexplorer/*.exe
+tools/dcsexplorer/ENCODER.md
+
+# ---- Build output ----
+build/
+dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# ---- Local working files ----
+.playwright-mcp/
+.remember/
+ajustes.json
+mejoras pendientes.txt
+*.mid
+*.wav
+*.vgm
+mapas/*_bruto.json

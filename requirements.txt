@@ -1,0 +1,5 @@
+numpy>=2.0
+# For running the test suite:
+pytest
+# For building the Windows package (EditorWPC.exe):
+pyinstaller
