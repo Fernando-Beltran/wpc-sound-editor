@@ -87,6 +87,12 @@ YM2151. El editor **emula la placa** para oírla.
 
 - **Escuchar** genera la música de un comando (la primera vez tarda unos segundos; luego
   queda guardada). **Generar todas** las prepara de una vez, con barra de progreso.
+- Para sintetizar el sonido del chip FM el editor usa **VGMPlay**, que **viene incluido**
+  en el paquete de Windows. Si faltara (por ejemplo, si se borró), aparece un aviso encima
+  de la lista con el enlace de descarga,
+  **https://github.com/vgmrips/vgmplay-legacy/releases**: basta con poner `VGMPlay.exe`,
+  `VGMPlay.ini` y `zlib1.dll` en la carpeta `tools\vgmplay`, junto a `EditorWPC.exe`, y
+  volver a abrir el editor. El resto del editor funciona sin él.
 - Cada música admite las mismas anotaciones que un bloque.
 
 **Sustituir una música por un WAV.** El chip FM no puede tocar audio, así que el comando
@@ -190,7 +196,7 @@ cabe, te lo dice. Sustituir una pista libera los audios que solo usaba ella.
 | Abro el exe y no hace nada | Abre `dist\EditorWPC\EditorWPC.exe`, no el de `build\`. |
 | "Ese comando no produjo música" | Mira el mensaje: si dice que no hay conexión, el editor se cerró; arráncalo y vuelve a cargar las ROM. |
 | Un zócalo en rojo | Esa imagen no es de ningún juego conocido (otra revisión, o un fichero dañado o vacío). |
-| No suena la música FM | Falta VGMPlay en `tools/vgmplay/` (ver `tools/README.md`). |
+| "Hace falta VGMPlay" al escuchar música | Descárgalo de https://github.com/vgmrips/vgmplay-legacy/releases y pon `VGMPlay.exe`, `VGMPlay.ini` y `zlib1.dll` en `tools\vgmplay` junto a `EditorWPC.exe`; luego vuelve a abrir el editor. |
 | No abre un juego DCS | Falta DCS Explorer en `tools/dcsexplorer/`. |
 | "No cabe" | Usa menos audio, menos calidad (DCS lo hace solo) u otro bloque más grande. |
 

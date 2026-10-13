@@ -19,7 +19,11 @@ here because the BSD licence asks for them to travel with the binaries.
 aquí porque su licencia BSD pide que acompañen a los ejecutables.
 
 The Windows package (`EditorWPC.spec`) bundles VGMPlay and DCS Explorer from these
-folders, so they must be in place before building it.
+folders, so they must be in place before building it. VGMPlay goes in with its own
+`licenses/` folder (old MAME licence, GPL and others) and a `SOURCE.txt` pointing to its
+source code; because of the MAME licence, the package must not be sold.
 
 El paquete de Windows (`EditorWPC.spec`) incluye VGMPlay y DCS Explorer desde estas
-carpetas, así que tienen que estar antes de construirlo.
+carpetas, así que tienen que estar antes de construirlo. VGMPlay va con su carpeta
+`licenses/` (licencia antigua de MAME, GPL y otras) y un `SOURCE.txt` que indica dónde está
+su código fuente; por la licencia de MAME, el paquete no se puede vender.

@@ -24,8 +24,14 @@ def _folder():
     copied once to the user's data directory and run from there.
     """
     try:
+        import sys
         from wpcide import paths
         if paths.frozen():
+            # The package bundles VGMPlay; if it was left out or removed,
+            # the user may put it beside the executable, in tools/vgmplay.
+            beside = pathlib.Path(sys.executable).resolve().parent / "tools" / "vgmplay"
+            if not paths.bundled("tools", "vgmplay").exists() and beside.exists():
+                return beside
             return paths.writable_copy("tools", "vgmplay")
         return paths.bundled("tools", "vgmplay")
     except Exception:          # noqa: BLE001
@@ -34,6 +40,9 @@ def _folder():
 
 VGMPLAY = _folder() / "VGMPlay.exe"
 CONFIG = VGMPLAY.parent / "VGMPlay.ini"
+
+
+DOWNLOAD = "https://github.com/vgmrips/vgmplay-legacy/releases"
 
 
 class NotInstalled(Exception):
@@ -47,7 +56,11 @@ def available():
 def render(vgm_path, timeout=120):
     """Renders one .vgm beside itself as .wav and returns that path."""
     if not available():
-        raise NotInstalled("falta VGMPlay en %s" % VGMPLAY)
+        raise NotInstalled(
+            "Falta VGMPlay para oir la musica FM. Descargalo de "
+            + DOWNLOAD + " y pon VGMPlay.exe, VGMPlay.ini y "
+            "zlib1.dll en la carpeta tools\vgmplay junto a EditorWPC.exe "
+            "(o en %s)." % VGMPLAY.parent)
 
     vgm_path = pathlib.Path(vgm_path).resolve()
     original = CONFIG.read_text(encoding="latin-1")

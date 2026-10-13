@@ -690,6 +690,23 @@ function lockMusic(busy) {
   $("render-all").disabled = busy;
 }
 
+/** A missing VGMPlay is the user's to fix: say how, with the link. */
+function showVgmplayMissing(body) {
+  const warn = $("music-warn");
+  const url = body.url || "https://github.com/vgmrips/vgmplay-legacy/releases";
+  warn.innerHTML = t("music.noVgmplay", { url: `<a href="${url}" target="_blank" rel="noopener">${url}</a>` });
+  warn.hidden = false;
+}
+
+/** The text to show for a failed request: friendly where we know why. */
+function errorText(body, status) {
+  if (body && body.code === "vgmplay_missing") {
+    showVgmplayMissing(body);
+    return t("music.noVgmplayShort");
+  }
+  return (body && body.error) || t("music.serverError", { status: status });
+}
+
 async function playMusic(item) {
   const command = Number(item.dataset.cmd);
   if (rendering) return;
@@ -713,7 +730,7 @@ async function playMusic(item) {
       // as itself rather than blamed on the command.
       const body = await response.json().catch(() => ({}));
       button.textContent = response.status === 404 ? t("music.failed")
-        : (body.error || t("music.serverError", { status: response.status }));
+        : errorText(body, response.status);
       return;
     }
     const url = URL.createObjectURL(await response.blob());
@@ -762,6 +779,12 @@ async function renderAll() {
     try {
       const response = await fetch(`/api/music/${row.command}`,
                                    { signal: bulkAbort.signal });
+      if (response.status === 503) {
+        // Without VGMPlay every render would fail the same way: stop and say why.
+        errorText(await response.json().catch(() => ({})), 503);
+        if (item) item.classList.remove("working");
+        break;
+      }
       if (response.ok) {
         row.ready = true;
         if (item) {
@@ -1021,7 +1044,7 @@ async function auditionInstrument(button) {
     const response = await fetch(`/api/instrument/${ident}?cmd=${chosenMusic.command}`);
     if (!response.ok) {
       const body = await response.json().catch(() => ({}));
-      midiError(body.error || String(response.status));
+      midiError(errorText(body, response.status));
       return;
     }
     sound(URL.createObjectURL(await response.blob()), $("music-wave"));
@@ -1081,7 +1104,7 @@ async function hearMidi() {
     const response = await fetch(`/api/midi/${chosenMusic.command}/preview?${midiQuery()}`);
     if (!response.ok) {
       const body = await response.json().catch(() => ({}));
-      midiError(body.error || String(response.status));
+      midiError(errorText(body, response.status));
       return;
     }
     sound(URL.createObjectURL(await response.blob()), $("music-wave"));

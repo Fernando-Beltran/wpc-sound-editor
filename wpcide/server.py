@@ -26,6 +26,7 @@ from wpcaudio.fetcher import FetchError, fetch, save_settings, settings
 from wpcide import paths
 from wpcaudio.games import GAMES, ipdb_search_url, search
 from wpcide.app import Ide, NotLoaded
+from wpcaudio import vgmplay
 
 STATIC = paths.bundled("wpcide", "static")
 
@@ -201,6 +202,11 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send(200, self.ide.patched(), "application/zip", name)
         except NotLoaded as problem:
             return self._json({"error": str(problem)}, 409)
+        except vgmplay.NotInstalled as problem:
+            # Not a crash: a missing helper the user can fetch. The page
+            # turns the code into a friendly, translated notice with a link.
+            return self._json({"error": str(problem), "code": "vgmplay_missing",
+                               "url": vgmplay.DOWNLOAD}, 503)
         except FetchError as problem:
             return self._json({"error": str(problem)}, 502)
         except KeyError as problem:

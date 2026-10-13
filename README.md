@@ -175,7 +175,7 @@ This project stands on other people's work. / Este proyecto se apoya en el traba
 | **The MAME and PinMAME teams** | PinMAME, to run and verify patched sets; its sources (`hc55516.c`, `wmssnd.c`, `ym2151.c`, the WPC drivers) as the hardware documentation behind the HC55516 codec constants, the sound board banking and the YM2151 delayed IRQ clear | BSD-3-Clause / old MAME licence |
 | **Michael J Roberts** | **DCS Explorer** and **DCS Encoder**, which decode and rebuild DCS sound ROMs, and his *DCS Audio Format Technical Reference* | BSD-3-Clause |
 | ↳ used by DCS Explorer | ADSP-21xx emulator by Aaron Giles (via PinMAME), libnyquist (Dimitri Diakopoulos), libsamplerate (Erik de Castro Lopo), miniz (RAD Game Tools, Valve, Rich Geldreich) | BSD / BSD / BSD / MIT |
-| **Valley Bell** and contributors (vgmrips) | **VGMPlay**, which synthesises the YM2151 music from VGM logs (its cores are largely MAME's) | see VGMPlay's own documentation |
+| **Valley Bell** and contributors (vgmrips) | **VGMPlay**, which synthesises the YM2151 music from VGM logs (its cores are largely MAME's). Included unmodified in the Windows package with its licences and a pointer to its source | Old MAME licence (no sale) + GPL parts + others, listed in its `licenses/List.txt` |
 | **Fonticons, Inc.** | **Font Awesome Free 6.7.2** icons and fonts | Icons CC BY 4.0, fonts SIL OFL 1.1, code MIT |
 | **NumPy developers** | NumPy | BSD-3-Clause |
 | **The Python Software Foundation** | Python and its standard library | PSF License |

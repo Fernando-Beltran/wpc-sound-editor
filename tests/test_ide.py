@@ -594,3 +594,33 @@ def test_a_port_held_by_something_else_moves_to_the_next(monkeypatch):
 def test_dcs_sockets_are_accepted_one_image_at_a_time():
     from wpcide.server import KNOWN_SOCKETS
     assert {"u18", "u15", "u14", "u2", "u8"} <= KNOWN_SOCKETS
+
+
+def test_a_missing_vgmplay_is_reported_with_its_download_link():
+    import json as _json
+    import threading
+    import urllib.error
+    import urllib.request
+    import wpcide.server as srv
+    from wpcaudio import vgmplay
+
+    server = srv.EditorServer(("127.0.0.1", 0), srv.Handler)
+    server.ide = Ide()
+
+    def missing(*args, **kwargs):
+        raise vgmplay.NotInstalled("falta VGMPlay")
+    server.ide.music_wav = missing
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    try:
+        url = "http://127.0.0.1:%d/api/music/14" % server.server_address[1]
+        try:
+            urllib.request.urlopen(url, timeout=5)
+            raise AssertionError("expected an error")
+        except urllib.error.HTTPError as error:
+            body = _json.loads(error.read())
+            assert error.code == 503
+            assert body["code"] == "vgmplay_missing"
+            assert body["url"].startswith("https://github.com/vgmrips/")
+    finally:
+        server.shutdown()
+        server.server_close()

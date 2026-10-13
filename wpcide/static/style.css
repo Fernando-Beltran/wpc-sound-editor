@@ -695,3 +695,8 @@ canvas.wave.src { width: 100%; height: 150px; cursor: grab; touch-action: none; 
 .dcs-filter .modes { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 auto; grid-template-columns: none; }
 .dcs-filter .modes button { flex: none; white-space: nowrap; padding: 7px 12px; }
 .dcs-filter #dcs-search { flex: 1 1 220px; }
+
+/* A notice the user can act on: a missing helper program, with its link. */
+.notice { border: 1px solid #e2a03f; background: #e2a03f1a; color: inherit; border-radius: 8px;
+  padding: 10px 12px; margin: 10px 0; font-size: 13px; line-height: 1.5; }
+.notice a { color: #f0c070; word-break: break-all; }

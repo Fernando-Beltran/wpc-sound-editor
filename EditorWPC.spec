@@ -15,8 +15,14 @@ settings -- goes to the user's own data directory, never beside the
 executable. See `wpcide/paths.py`.
 """
 
+import glob
+import os
+
 datos = [
     ("wpcide/static", "wpcide/static"),   # the page, its fonts, its icons
+    # VGMPlay, unmodified, with its licences and a note on where its source
+    # is (tools/vgmplay/licenses, SOURCE.txt): parts are GPL, parts the old
+    # MAME licence, which allows passing it on but not selling it.
     ("tools/vgmplay", "tools/vgmplay"),   # the YM2151 renderer
     # DCS Explorer and DCS Encoder (BSD-3, Michael J Roberts): decode and
     # rebuild DCS sound ROMs. Their LICENSE travels with them, as the
@@ -27,7 +33,10 @@ datos = [
     ("tools/dcsexplorer/DCSEncoder.exe", "tools/dcsexplorer"),
     ("tools/dcsexplorer/LICENSE", "tools/dcsexplorer"),
     ("tools/dcsexplorer/README.md", "tools/dcsexplorer"),
-    ("mapas", "mapas"),                   # which command plays which sound
+] + [
+    # Which command plays which sound, and the instrument catalogue --
+    # not the raw catalogue it was condensed from.
+    (path, "mapas") for path in glob.glob("mapas/*.json") if not path.endswith("_bruto.json")
 ]
 
 analisis = Analysis(

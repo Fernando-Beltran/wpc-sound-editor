@@ -88,6 +88,11 @@ The editor **emulates the board** to hear it.
 
 - **Listen** renders a command's music (a few seconds the first time; kept afterwards).
   **Render them all** prepares every one, with a progress bar.
+- To synthesise the FM chip's sound the editor uses **VGMPlay**, which **comes included**
+  in the Windows package. If it is missing (deleted, say), a notice above the list gives
+  the download link, **https://github.com/vgmrips/vgmplay-legacy/releases**: put
+  `VGMPlay.exe`, `VGMPlay.ini` and `zlib1.dll` in the `tools\vgmplay` folder next to
+  `EditorWPC.exe` and open the editor again. Everything else works without it.
 - Music takes the same annotations as a block.
 
 **Replacing a music cue with a WAV.** The FM chip cannot play audio, so the command is
@@ -190,7 +195,7 @@ Replacing a track frees the audio only that track used.
 | I open the exe and nothing happens | Open `dist\EditorWPC\EditorWPC.exe`, not the one in `build\`. |
 | "That command produced no music" | Read the message: if it says there is no connection, the editor closed; start it and load the ROMs again. |
 | A socket turns red | That image is not from a known game (another revision, or a damaged or empty file). |
-| No FM music | VGMPlay is missing from `tools/vgmplay/` (see `tools/README.md`). |
+| "Hearing the FM music needs VGMPlay" | Download it from https://github.com/vgmrips/vgmplay-legacy/releases and put `VGMPlay.exe`, `VGMPlay.ini` and `zlib1.dll` in `tools\vgmplay` next to `EditorWPC.exe`; then open the editor again. |
 | A DCS game will not open | DCS Explorer is missing from `tools/dcsexplorer/`. |
 | "It does not fit" | Use less audio, lower quality (DCS does it for you) or a bigger block. |
 
