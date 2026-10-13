@@ -41,14 +41,12 @@ Verified in PinMAME: patched sets boot like the originals and play the new audio
 
 | | |
 | --- | --- |
-| ![Loading the ROMs](docs/img/01-carga.png) | ![Twilight Zone: the sound chips](docs/img/02-tz-mapa.png) |
+| ![Loading the ROMs](docs/img/en/01-load.png) | ![Twilight Zone: the sound chips](docs/img/en/02-tz-map.png) |
 | **Loading** — pick the board, drop the files or PinMAME's zip | **Twilight Zone** — every sound block in place on its chip |
-| ![The FM music](docs/img/03-tz-musica.png) | ![MIDI into the game's music](docs/img/04-tz-midi.png) |
+| ![The FM music](docs/img/en/03-tz-music.png) | ![MIDI into the game's music](docs/img/en/04-tz-midi.png) |
 | **Music** — the FM music rendered by emulating the board | **MIDI** — parts, instruments and channel priority |
-| ![Star Trek: TNG tracks](docs/img/05-dcs-pistas.png) | ![The DCS trimmer](docs/img/06-dcs-recorte.png) |
+| ![Star Trek: TNG tracks](docs/img/en/05-dcs-tracks.png) | ![The DCS trimmer](docs/img/en/06-dcs-trimmer.png) |
 | **STTNG (DCS)** — 482 tracks, their audio lit on the 7 ROMs | **Trimmer** — a slot-sized window and speed fitting |
-
-*(The interface is shown in Spanish; the flag button switches it to English.)*
 
 ### ROMs
 

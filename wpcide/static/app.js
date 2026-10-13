@@ -1399,7 +1399,9 @@ $("find").addEventListener("input", (event) => {
 $("lang").addEventListener("click", () => {
   setLanguage(document.documentElement.lang === "es" ? "en" : "es");
   musicLoaded = false;
-  if (state) {
+  if (state && state.platform === "dcs") {
+    render();                       // the DCS view has no tabs to restore
+  } else if (state) {
     const onMusic = !$("music").hidden;
     render();
     showTab(onMusic ? "music" : "map");
@@ -1409,7 +1411,9 @@ $("lang").addEventListener("click", () => {
   }
 });
 
-setLanguage(document.documentElement.lang);
+// The language picked from the saved choice or the browser -- not the
+// markup's own lang="es", which would undo the user's choice on every load.
+setLanguage(lang);
 find("");
 for (const button of $("board-pick").querySelectorAll("button")) {
   button.addEventListener("click", async () => {
